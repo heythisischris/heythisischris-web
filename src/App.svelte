@@ -8,17 +8,30 @@
   export let url = "";
 </script>
 
-<Router url="{url}">
-  <nav>
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="resume">Resume</NavLink>
-    <NavLink to="apps">Apps</NavLink>
-    <NavLink to="sites">Sites</NavLink>
-    <NavLink to="film">Film</NavLink>
-    <NavLink to="music">Music</NavLink>
-  </nav>
-  <div>
-    <Route path="/" component="{Home}" />
-    <Route path="resume" component="{Test}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<Router {url}>
+  <div class="container">
+    <nav>
+      <div class="navContainer">
+        <div class="navTitle">
+          <NavLink to="/">
+            <img class="logo" alt="" src="/images/logo.png" />
+          </NavLink>
+          <NavLink to="/">
+            heythisischris
+          </NavLink>
+        </div>
+        <div class="navLinks">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="Portfolio">Portfolio</NavLink>
+          <NavLink to="resume">Resume</NavLink>
+          <NavLink to="contact">Contact</NavLink>
+        </div>
+      </div>
+    </nav>
+    <div class="pageContainer">
+      <Route path="/" component={Home} />
+      <Route path="resume" component={Test} />
+    </div>
   </div>
 </Router>

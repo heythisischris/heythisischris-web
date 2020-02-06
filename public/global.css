@@ -1,45 +1,122 @@
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+  font-family: Arial;
   font-size: 16px;
   margin: 0;
   padding: 0;
-  text-align: center;
-  background-color: #2a2d37;
+  background-color: #efefef;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 800px;
+  background-color: #ffffff;
+  padding: 20px;
+  min-height: 800px;
 }
 
 nav {
   width: 100%;
-  background-color: #4e57ba;
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cccccc;
 }
 
-nav a {
-  color: #2a2d37;
-  padding: 1em;
-  display: inline-block;
+.navContainer {
+  padding: 0px 10px;
+  width: 100%;
 }
 
-a.active,
-h1,
-h2 {
-  color: #da99da;
+.navTitle {
+  padding-top:10px;
 }
 
-ul {
-  padding-left: 0;
-  list-style: none;
+.navTitle a {
+  all: unset;
+  cursor: pointer;
+  margin: 0px 5px;
+  font-size: 36px;
 }
 
-a {
+.navTitle a:hover {
   text-decoration: none;
-  color: #4e57ba;
-  font-weight: bold;
 }
 
+.navLinks {
+  height: 30px;
+}
+
+.navLinks a {
+  color: #2a2d37;
+  padding: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navLinks a.active {
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 25px;
+  float: left;
+  margin-top:-12px;
+}
+
+.pageContainer {
+  padding: 0px 10px;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight:600;
+  color: #666666;
+  margin-bottom:-10px;
+}
 p {
-  max-width: 768px;
-  margin: 0 auto;
-  color: white;
-  padding: 1em;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    padding: 5px;
+    background-color: #ffffff;
+  }
+  .container {
+    width: 100%;
+    padding: 0px;
+    min-height: 0px;
+  }
+  .navContainer {
+    width: 94vw;
+    text-align: center;
+  }
+  .navTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 18px;
+    margin-top:0px;
+  }
+  .navLinks {
+    margin-top:5px;
+  }
+  .navLinks a {
+    padding: 8px;
+  }
+  .pageContainer {
+    padding: 0px 20px;
+  }
 }
