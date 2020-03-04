@@ -11,7 +11,8 @@
     "rollup-plugin-terser": "^5.2.0",
     "sirv-cli": "^0.4.5",
     "svelte": "^3.18.1",
-    "svelte-routing": "1.4.0"
+    "svelte-routing": "1.4.0",
+    "xml-js": "^1.6.11"
   },
   "scripts": {
     "start": "run-p watch server",

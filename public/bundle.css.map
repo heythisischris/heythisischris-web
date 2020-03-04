@@ -1,8 +1,12 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "..\\Contact.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\n  .textarea {\n    width: 90%;\n    height: 125px;\n    font-family: Arial;\n    padding: 5px;\n  }\n  .input {\n    width: 90%;\n    padding: 5px;\n  }\n  .send {\n    width: 90%;\n    text-align: right;\n  }\n  .sendButton {\n    padding: 10px 20px;\n  }\n  @media only screen and (max-width: 850px) {\n    .textarea {\n      width: 90%;\n    }\n    .input {\n      width: 90%;\n    }\n    .send {\n      width: 90%;\n    }\n  }\n</style>\n\n<div class=\"mainbarAndSidebarContainer\">\n  <div class=\"mainbar\">\n    <h1>Name</h1>\n    <div class=\"textBlock\">\n      <p>Christopher James Aitken (25 y/o)</p>\n    </div>\n\n    <h1>Email</h1>\n    <div class=\"textBlock\">\n      <p>\n        <a href=\"mailto:chris@heythisischris.com\">chris@heythisischris.com</a>\n      </p>\n    </div>\n\n    <h1>Leave me a message</h1>\n    <div class=\"textBlock\">\n      <p>\n        <input class=\"input\" placeholder=\"Name\" />\n      </p>\n      <p>\n        <input class=\"input\" placeholder=\"Email\" />\n      </p>\n      <p>\n        <textarea class=\"textarea\" placeholder=\"Message\" />\n      </p>\n      <p class=\"send\">\n        <button class=\"sendButton\">Send</button>\n      </p>\n    </div>\n  </div>\n\n  <div class=\"sidebar\">\n    <h1>Response ETA?</h1>\n    <div class=\"textBlock\">\n      <p>Usually within a few hours, I check my email pretty frequently.</p>\n    </div>\n  </div>\n</div>\n"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AACE,SAAS,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,KAAK,CACb,WAAW,CAAE,KAAK,CAClB,OAAO,CAAE,GAAG,AACd,CAAC,AACD,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,GAAG,AACd,CAAC,AACD,KAAK,eAAC,CAAC,AACL,KAAK,CAAE,GAAG,CACV,UAAU,CAAE,KAAK,AACnB,CAAC,AACD,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CAAC,IAAI,AACpB,CAAC,AACD,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzC,SAAS,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,KAAK,eAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACZ,CAAC,AACH,CAAC"
 }
