@@ -3,7 +3,8 @@
   let githubFeed = [];
   onMount(async function() {
     const response = await fetch(
-      "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fgithub.com%2Fheythisischris.atom"
+      //"https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fgithub.com%2Fheythisischris.atom"
+      "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fgithub.com%2Fheythisischris%2Fheythisischris-web%2Fcommits.atom"
     );
     let data = await response.json();
     githubFeed = data.items;
