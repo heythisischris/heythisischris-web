@@ -33,13 +33,15 @@
   <div class="mainbar">
     <h1>Name</h1>
     <div class="textBlock">
-      <p>Christopher James Aitken (25 y/o)</p>
+      <p>Christopher James Aitken (I'm 25, btw)</p>
     </div>
 
     <h1>Email</h1>
     <div class="textBlock">
       <p>
-        <a href="mailto:chris@heythisischris.com">chris@heythisischris.com</a>
+        <a target="_blank" href="mailto:chris@heythisischris.com">
+          chris@heythisischris.com
+        </a>
       </p>
     </div>
 
@@ -55,7 +57,11 @@
         <textarea class="textarea" placeholder="Message" />
       </p>
       <p class="send">
-        <button class="sendButton">Send</button>
+        <button
+          class="sendButton"
+          onclick="alert('Sorry, this feature doesn\'t work yet!')">
+          Send
+        </button>
       </p>
     </div>
   </div>

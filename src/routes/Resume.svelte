@@ -18,7 +18,7 @@
     <strong>Application Developer,</strong>
     June 2016 &ndash; Present
     <br>
-    <a href="http://teckpert.com">TECKpert</a>, Miami, Florida &ndash; Web/Mobile Software Development Agency
+    <a target="_blank" href="https://teckpert.com">TECKpert</a>, Miami, Florida &ndash; Web/Mobile Software Development Agency
   </p>
   <ul style="margin-top:-15px;">
     <li>
@@ -30,19 +30,19 @@
       apps and web services:
       <ul>
         <li>
-          <a href="http://corkagefee.com">CorkageFee</a> &ndash; View wine bottle fees at nearby restaurants
+          <a target="_blank" href="https://corkagefee.com">CorkageFee</a> &ndash; View wine bottle fees at nearby restaurants
         </li>
         <li>
-           <a href="http://realdash.com">RealDash</a> &ndash; Platform for real estate professionals
+           <a target="_blank" href="https://realdash.com">RealDash</a> &ndash; Platform for real estate professionals
         </li>
         <li>
-           <a href="http://roamwith.com">ROAM Ropes</a> &ndash; Audio equalization for Bluetooth earphones
+           <a target="_blank" href="https://roamwith.com">ROAM Ropes</a> &ndash; Audio equalization for Bluetooth earphones
         </li>
         <li>
-           <a href="http://castcloud.me">CastCloud</a> &ndash; Casting attendance system for film productions
+           <a target="_blank" href="https://castcloud.me">CastCloud</a> &ndash; Casting attendance system for film productions
         </li>
         <li>
-           <a href="http://csklegal.com">CSK Legal</a> &ndash; Shows directory of attorneys with the CSK firm
+           <a target="_blank" href="https://csklegal.com">CSK Legal</a> &ndash; Shows directory of attorneys with the CSK firm
         </li>
       </ul>
     </li>
@@ -54,7 +54,7 @@
       Created/maintained WordPress plugins for various client websites in PHP
     </li>
     <li>
-      Experience with Serverless Applications on AWS for <a href="http://hospitalistapp.com">Hospitalist Assist</a>, a patient
+      Experience with Serverless Applications on AWS for <a target="_blank" href="https://hospitalistapp.com">Hospitalist Assist</a>, a patient
       admitting portal
       <ul>
         <li>
@@ -75,14 +75,11 @@
   <br>Lexus Eco Challenge, Miami, Florida</p>
   <ul style="margin-top:-15px">
     <li>
-      Developed <a href="http://dontbeadrain.com">dontbeadrain.com</a> which highlighted water conservation tips using HTML5
+      Developed <a target="_blank" href="https://dontbeadrain.com">dontbeadrain.com</a> which highlighted water conservation tips using HTML5
       and CSS3.
     </li>
     <li>
-      Won 1
-      <sup>st</sup>
-      Place in National Competition, received over $20,000 in funding for our
-      school
+      Won 1st Place in National Competition, received over $20,000 in funding for our school
     </li>
   </ul>
   <p>
@@ -94,8 +91,7 @@
       Programmed several Flash games
     </li>
     <li>
-      Sold <a href="https://www.kongregate.com/games/fettspielen/dodge">Dodge</a> to Fettspielen.de, a German game portal.
-      
+      Sold <a target="_blank" href="https://www.kongregate.com/games/fettspielen/dodge">Dodge</a> to Fettspielen.de, a German game portal.
     </li>
   </ul>
 </div>
@@ -115,6 +111,8 @@
 <h1>Skills</h1>
 <div class="textBlock">
   <p>
+    <strong>Cloud Environments:</strong>
+    AWS (strongest), DigitalOcean, Azure<br>
     <strong>Languages:</strong>
     JavaScript, React, React Native, Angular, PHP, ASP, C# (.NET), Java, Swift,
     Obj-C, C++<br>
