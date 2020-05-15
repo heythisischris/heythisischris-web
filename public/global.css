@@ -195,6 +195,9 @@ hr {
   margin-right: 5px;
   filter: contrast(0.25);
 }
+#mobileSocialMedia {
+  display:none;
+}
 
 @media only screen and (max-width: 850px) {
   body {
@@ -211,14 +214,14 @@ hr {
   }
   .navTitle {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
   }
   .logo {
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width: 48px;
     border-radius: 18px;
-    margin-top: 0px;
+    margin-top: 5px;
   }
   .navLinks {
     margin-top: 5px;
@@ -251,5 +254,20 @@ hr {
   }
   hr {
     display: none;
+  }
+  .newsTitle {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .newsContent {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  nav {
+    border-bottom: none;
+    padding-bottom: 2px;
+  }
+  #mobileSocialMedia {
+    display:block;
   }
 }

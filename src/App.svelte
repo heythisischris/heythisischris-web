@@ -30,7 +30,6 @@
           <a target="_blank" href="https://www.linkedin.com/in/chris-aitken-293045183/"><img class="socialIcon" alt="linkedin" src="images/linkedin.svg"></a>
           <a target="_blank" href="https://www.instagram.com/heythisischris/"><img class="socialIcon" alt="instagram" src="images/instagram.svg"></a>
           <a target="_blank" href="https://www.facebook.com/chrisaitken"><img class="socialIcon" alt="bandcamp" src="images/facebook.svg"></a>
-          <a target="_blank" href="https://heythisischris.bandcamp.com/"><img class="socialIcon" alt="bandcamp" src="images/bandcamp.svg"></a>
         </div>
       </div>
     </nav>

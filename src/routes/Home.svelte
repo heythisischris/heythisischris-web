@@ -32,7 +32,7 @@
   <div class="mainbar">
     <h1>Who is Chris?</h1>
     <div class="textBlock">
-      <p>I'm a software developer based in Miami, FL.</p>
+      <p>I'm a software developer in Miami, FL.</p>
     </div>
     <h1>What does Chris do now?</h1>
     <div class="textBlock">
@@ -42,9 +42,10 @@
         <a target="_blank" href="https://place4pals.com">place4pals</a>.
       </p>
     </div>
+
     <div class="titleBar">
       <img alt="github" src="images/newspaper.svg" />
-      <h1>News Feed</h1>
+      <h1>Chris Feed</h1>
     </div>
     {#each newsFeed as item}
       <div class="newsTitle">

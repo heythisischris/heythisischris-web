@@ -58,7 +58,7 @@
 
 <h1>Apps & Websites</h1>
 <div class="textBlock">
-  <p>These are some of the apps/websites that I've worked on.</p>
+  <p>Here are some of my projects outside of work.</p>
 </div>
 <div class="portfolioContainer">
   <div class="portfolioItem">
@@ -95,29 +95,29 @@
 
 <h1>Music</h1>
 <div class="textBlock">
-  <p>I also enjoying recording music- here are some albums I've released.</p>
+  <p>I also enjoy recording- here are some albums I've released.</p>
 </div>
 <div class="portfolioContainer">
-  <div class="musicItem">
-    <a target="_blank" href="https://poolhouselp.com">
-      <img alt="" src="/images/music/poolhouselp.jpg" />
-    </a>
-    <span>poolhouse lp</span>
-    <span class="portfolioDate">May 10, 2020</span>
-  </div>
   <div class="musicItem">
     <a target="_blank" href="https://familyfilm.net">
       <img alt="" src="/images/music/familyfilm.jpg" />
     </a>
     <span>family film</span>
-    <span class="portfolioDate">May 10, 2020</span>
+    <span class="portfolioDate">July 2020 (soon!)</span>
+  </div>
+  <div class="musicItem">
+    <a target="_blank" href="https://poolhouselp.com">
+      <img alt="" src="/images/music/poolhouselp.jpg" />
+    </a>
+    <span>poolhouse lp</span>
+    <span class="portfolioDate">May 2020</span>
   </div>
   <div class="musicItem">
     <a target="_blank" href="https://thebreakersproject.bandcamp.com/">
       <img alt="" src="/images/music/4songsfromprovidence.jpg" />
     </a>
     <span>4 songs from pvd</span>
-    <span class="portfolioDate">May 10, 2020</span>
+    <span class="portfolioDate">Dec 2018</span>
   </div>
   <div class="musicItem">
     <a
@@ -126,7 +126,7 @@
       <img alt="" src="/images/music/canvasface.jpg" />
     </a>
     <span>canvas face</span>
-    <span class="portfolioDate">May 10, 2020</span>
+    <span class="portfolioDate">Oct 2016</span>
   </div>
   <div class="musicItem">
     <a
@@ -135,6 +135,6 @@
       <img alt="" src="/images/music/lightheaded.jpg" />
     </a>
     <span>lightheaded</span>
-    <span class="portfolioDate">May 10, 2020</span>
+    <span class="portfolioDate">Feb 2013</span>
   </div>
 </div>

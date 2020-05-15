@@ -33,7 +33,7 @@
   <div class="mainbar">
     <h1>Name</h1>
     <div class="textBlock">
-      <p>Christopher James Aitken (I'm 25, btw)</p>
+      <p>Christopher James Aitken (I'm 25, he/him)</p>
     </div>
 
     <h1>Email</h1>
@@ -43,6 +43,19 @@
           chris@heythisischris.com
         </a>
       </p>
+    </div>
+    
+
+    <div id="mobileSocialMedia">
+      <h1>Social Media</h1>
+      <div class="textBlock">
+        <p>
+            <a target="_blank" href="https://github.com/heythisischris"><img class="socialIcon" alt="github" src="images/github.svg"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/chris-aitken-293045183/"><img class="socialIcon" alt="linkedin" src="images/linkedin.svg"></a>
+            <a target="_blank" href="https://www.instagram.com/heythisischris/"><img class="socialIcon" alt="instagram" src="images/instagram.svg"></a>
+            <a target="_blank" href="https://www.facebook.com/chrisaitken"><img class="socialIcon" alt="bandcamp" src="images/facebook.svg"></a>
+        </p>
+      </div>
     </div>
 
     <h1>Leave me a message</h1>

@@ -1028,7 +1028,7 @@ const Home = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
   <div class="${"mainbar"}">
     <h1>Who is Chris?</h1>
     <div class="${"textBlock"}">
-      <p>I&#39;m a software developer based in Miami, FL.</p>
+      <p>I&#39;m a software developer in Miami, FL.</p>
     </div>
     <h1>What does Chris do now?</h1>
     <div class="${"textBlock"}">
@@ -1038,9 +1038,10 @@ const Home = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
         <a target="${"_blank"}" href="${"https://place4pals.com"}">place4pals</a>.
       </p>
     </div>
+
     <div class="${"titleBar"}">
       <img alt="${"github"}" src="${"images/newspaper.svg"}">
-      <h1>News Feed</h1>
+      <h1>Chris Feed</h1>
     </div>
     ${each(newsFeed, item => `<div class="${"newsTitle"}">
         <a${add_attribute("href", item.link, 0)}>${escape(item.title)}</a>
@@ -1073,7 +1074,7 @@ const Home = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 
 const css = {
 	code: ".portfolioContainer.svelte-ot4zjt.svelte-ot4zjt{display:flex;flex-direction:row;justify-content:flex-start;margin-top:-15px;flex-wrap:wrap;width:100%;padding:10px}.musicItem.svelte-ot4zjt.svelte-ot4zjt{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:5px;width:125px}.musicItem.svelte-ot4zjt img.svelte-ot4zjt{width:125px;height:125px}.portfolioDate.svelte-ot4zjt.svelte-ot4zjt{font-size:11px;color:#666666}.portfolioItem.svelte-ot4zjt.svelte-ot4zjt{display:flex;flex-direction:row;justify-content:flex-start;align-items:center;width:50%}.portfolioItem.svelte-ot4zjt div.svelte-ot4zjt{display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;margin:5px}.portfolioItem.svelte-ot4zjt img.svelte-ot4zjt{width:75px;height:75px;margin-right:5px}.noLinkColor.svelte-ot4zjt.svelte-ot4zjt{text-decoration:none;color:#000000}@media only screen and (max-width: 850px){.portfolioItem.svelte-ot4zjt.svelte-ot4zjt{width:100%;margin-bottom:30px}}",
-	map: "{\"version\":3,\"file\":\"Portfolio.svelte\",\"sources\":[\"Portfolio.svelte\"],\"sourcesContent\":[\"<style>\\n  .portfolioContainer {\\n    display: flex;\\n    flex-direction: row;\\n    justify-content: flex-start;\\n    margin-top: -15px;\\n    flex-wrap: wrap;\\n    width: 100%;\\n    padding: 10px;\\n  }\\n  .musicItem {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: center;\\n    align-items: center;\\n    margin: 5px;\\n    width: 125px;\\n  }\\n  .musicItem img {\\n    width: 125px;\\n    height: 125px;\\n  }\\n  .portfolioDate {\\n    font-size: 11px;\\n    color: #666666;\\n  }\\n\\n  .portfolioItem {\\n    display: flex;\\n    flex-direction: row;\\n    justify-content: flex-start;\\n    align-items: center;\\n    width: 50%;\\n  }\\n  .portfolioItem div {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: flex-start;\\n    align-items: flex-start;\\n    margin: 5px;\\n  }\\n  .portfolioItem img {\\n    width: 75px;\\n    height: 75px;\\n    margin-right: 5px;\\n  }\\n  .noLinkColor {\\n    text-decoration: none;\\n    color: #000000;\\n  }\\n@media only screen and (max-width: 850px) {\\n  .portfolioItem {\\n      width:100%;\\n      margin-bottom:30px;\\n  }\\n}\\n</style>\\n\\n<h1>Apps & Websites</h1>\\n<div class=\\\"textBlock\\\">\\n  <p>These are some of the apps/websites that I've worked on.</p>\\n</div>\\n<div class=\\\"portfolioContainer\\\">\\n  <div class=\\\"portfolioItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://place4pals.com\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/apps/place4pals.jpg\\\" />\\n    </a>\\n    <div>\\n      <a class=\\\"noLinkColor\\\" target=\\\"_blank\\\" href=\\\"https://place4pals.com\\\">\\n        <span>place4pals</span>\\n      </a>\\n      <span class=\\\"portfolioDate\\\">Minimalist social media service</span>\\n      <span class=\\\"portfolioDate\\\">Built with React Native and Hasura</span>\\n    </div>\\n  </div>\\n  <div class=\\\"portfolioItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://guardianbrothers.com\\\">\\n      <img\\n        alt=\\\"\\\"\\n        src=\\\"/images/apps/guardianbrothers.svg\\\"\\n        style=\\\"height:auto;\\\" />\\n    </a>\\n    <div>\\n      <a\\n        class=\\\"noLinkColor\\\"\\n        target=\\\"_blank\\\"\\n        href=\\\"https://guardianbrothers.com\\\">\\n        <span>Guardian Brothers Holdings</span>\\n      </a>\\n      <span class=\\\"portfolioDate\\\">Front-facing website for a mutual fund</span>\\n      <span class=\\\"portfolioDate\\\">Built with Svelte</span>\\n    </div>\\n  </div>\\n</div>\\n\\n<h1>Music</h1>\\n<div class=\\\"textBlock\\\">\\n  <p>I also enjoying recording music- here are some albums I've released.</p>\\n</div>\\n<div class=\\\"portfolioContainer\\\">\\n  <div class=\\\"musicItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://poolhouselp.com\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/poolhouselp.jpg\\\" />\\n    </a>\\n    <span>poolhouse lp</span>\\n    <span class=\\\"portfolioDate\\\">May 10, 2020</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://familyfilm.net\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/familyfilm.jpg\\\" />\\n    </a>\\n    <span>family film</span>\\n    <span class=\\\"portfolioDate\\\">May 10, 2020</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://thebreakersproject.bandcamp.com/\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/4songsfromprovidence.jpg\\\" />\\n    </a>\\n    <span>4 songs from pvd</span>\\n    <span class=\\\"portfolioDate\\\">May 10, 2020</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a\\n      target=\\\"_blank\\\"\\n      href=\\\"https://heythisischris.bandcamp.com/album/canvas-face\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/canvasface.jpg\\\" />\\n    </a>\\n    <span>canvas face</span>\\n    <span class=\\\"portfolioDate\\\">May 10, 2020</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a\\n      target=\\\"_blank\\\"\\n      href=\\\"https://heythisischris.bandcamp.com/album/lightheaded\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/lightheaded.jpg\\\" />\\n    </a>\\n    <span>lightheaded</span>\\n    <span class=\\\"portfolioDate\\\">May 10, 2020</span>\\n  </div>\\n</div>\\n\"],\"names\":[],\"mappings\":\"AACE,mBAAmB,4BAAC,CAAC,AACnB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,GAAG,CACnB,eAAe,CAAE,UAAU,CAC3B,UAAU,CAAE,KAAK,CACjB,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,IAAI,AACf,CAAC,AACD,UAAU,4BAAC,CAAC,AACV,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,KAAK,AACd,CAAC,AACD,wBAAU,CAAC,GAAG,cAAC,CAAC,AACd,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACf,CAAC,AACD,cAAc,4BAAC,CAAC,AACd,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,OAAO,AAChB,CAAC,AAED,cAAc,4BAAC,CAAC,AACd,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,GAAG,CACnB,eAAe,CAAE,UAAU,CAC3B,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,4BAAc,CAAC,GAAG,cAAC,CAAC,AAClB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,UAAU,CAC3B,WAAW,CAAE,UAAU,CACvB,MAAM,CAAE,GAAG,AACb,CAAC,AACD,4BAAc,CAAC,GAAG,cAAC,CAAC,AAClB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,YAAY,CAAE,GAAG,AACnB,CAAC,AACD,YAAY,4BAAC,CAAC,AACZ,eAAe,CAAE,IAAI,CACrB,KAAK,CAAE,OAAO,AAChB,CAAC,AACH,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzC,cAAc,4BAAC,CAAC,AACZ,MAAM,IAAI,CACV,cAAc,IAAI,AACtB,CAAC,AACH,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Portfolio.svelte\",\"sources\":[\"Portfolio.svelte\"],\"sourcesContent\":[\"<style>\\n  .portfolioContainer {\\n    display: flex;\\n    flex-direction: row;\\n    justify-content: flex-start;\\n    margin-top: -15px;\\n    flex-wrap: wrap;\\n    width: 100%;\\n    padding: 10px;\\n  }\\n  .musicItem {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: center;\\n    align-items: center;\\n    margin: 5px;\\n    width: 125px;\\n  }\\n  .musicItem img {\\n    width: 125px;\\n    height: 125px;\\n  }\\n  .portfolioDate {\\n    font-size: 11px;\\n    color: #666666;\\n  }\\n\\n  .portfolioItem {\\n    display: flex;\\n    flex-direction: row;\\n    justify-content: flex-start;\\n    align-items: center;\\n    width: 50%;\\n  }\\n  .portfolioItem div {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: flex-start;\\n    align-items: flex-start;\\n    margin: 5px;\\n  }\\n  .portfolioItem img {\\n    width: 75px;\\n    height: 75px;\\n    margin-right: 5px;\\n  }\\n  .noLinkColor {\\n    text-decoration: none;\\n    color: #000000;\\n  }\\n@media only screen and (max-width: 850px) {\\n  .portfolioItem {\\n      width:100%;\\n      margin-bottom:30px;\\n  }\\n}\\n</style>\\n\\n<h1>Apps & Websites</h1>\\n<div class=\\\"textBlock\\\">\\n  <p>Here are some of my projects outside of work.</p>\\n</div>\\n<div class=\\\"portfolioContainer\\\">\\n  <div class=\\\"portfolioItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://place4pals.com\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/apps/place4pals.jpg\\\" />\\n    </a>\\n    <div>\\n      <a class=\\\"noLinkColor\\\" target=\\\"_blank\\\" href=\\\"https://place4pals.com\\\">\\n        <span>place4pals</span>\\n      </a>\\n      <span class=\\\"portfolioDate\\\">Minimalist social media service</span>\\n      <span class=\\\"portfolioDate\\\">Built with React Native and Hasura</span>\\n    </div>\\n  </div>\\n  <div class=\\\"portfolioItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://guardianbrothers.com\\\">\\n      <img\\n        alt=\\\"\\\"\\n        src=\\\"/images/apps/guardianbrothers.svg\\\"\\n        style=\\\"height:auto;\\\" />\\n    </a>\\n    <div>\\n      <a\\n        class=\\\"noLinkColor\\\"\\n        target=\\\"_blank\\\"\\n        href=\\\"https://guardianbrothers.com\\\">\\n        <span>Guardian Brothers Holdings</span>\\n      </a>\\n      <span class=\\\"portfolioDate\\\">Front-facing website for a mutual fund</span>\\n      <span class=\\\"portfolioDate\\\">Built with Svelte</span>\\n    </div>\\n  </div>\\n</div>\\n\\n<h1>Music</h1>\\n<div class=\\\"textBlock\\\">\\n  <p>I also enjoy recording- here are some albums I've released.</p>\\n</div>\\n<div class=\\\"portfolioContainer\\\">\\n  <div class=\\\"musicItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://familyfilm.net\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/familyfilm.jpg\\\" />\\n    </a>\\n    <span>family film</span>\\n    <span class=\\\"portfolioDate\\\">July 2020 (soon!)</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://poolhouselp.com\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/poolhouselp.jpg\\\" />\\n    </a>\\n    <span>poolhouse lp</span>\\n    <span class=\\\"portfolioDate\\\">May 2020</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a target=\\\"_blank\\\" href=\\\"https://thebreakersproject.bandcamp.com/\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/4songsfromprovidence.jpg\\\" />\\n    </a>\\n    <span>4 songs from pvd</span>\\n    <span class=\\\"portfolioDate\\\">Dec 2018</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a\\n      target=\\\"_blank\\\"\\n      href=\\\"https://heythisischris.bandcamp.com/album/canvas-face\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/canvasface.jpg\\\" />\\n    </a>\\n    <span>canvas face</span>\\n    <span class=\\\"portfolioDate\\\">Oct 2016</span>\\n  </div>\\n  <div class=\\\"musicItem\\\">\\n    <a\\n      target=\\\"_blank\\\"\\n      href=\\\"https://heythisischris.bandcamp.com/album/lightheaded\\\">\\n      <img alt=\\\"\\\" src=\\\"/images/music/lightheaded.jpg\\\" />\\n    </a>\\n    <span>lightheaded</span>\\n    <span class=\\\"portfolioDate\\\">Feb 2013</span>\\n  </div>\\n</div>\\n\"],\"names\":[],\"mappings\":\"AACE,mBAAmB,4BAAC,CAAC,AACnB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,GAAG,CACnB,eAAe,CAAE,UAAU,CAC3B,UAAU,CAAE,KAAK,CACjB,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,IAAI,AACf,CAAC,AACD,UAAU,4BAAC,CAAC,AACV,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,KAAK,AACd,CAAC,AACD,wBAAU,CAAC,GAAG,cAAC,CAAC,AACd,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACf,CAAC,AACD,cAAc,4BAAC,CAAC,AACd,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,OAAO,AAChB,CAAC,AAED,cAAc,4BAAC,CAAC,AACd,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,GAAG,CACnB,eAAe,CAAE,UAAU,CAC3B,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,4BAAc,CAAC,GAAG,cAAC,CAAC,AAClB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,UAAU,CAC3B,WAAW,CAAE,UAAU,CACvB,MAAM,CAAE,GAAG,AACb,CAAC,AACD,4BAAc,CAAC,GAAG,cAAC,CAAC,AAClB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,YAAY,CAAE,GAAG,AACnB,CAAC,AACD,YAAY,4BAAC,CAAC,AACZ,eAAe,CAAE,IAAI,CACrB,KAAK,CAAE,OAAO,AAChB,CAAC,AACH,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzC,cAAc,4BAAC,CAAC,AACZ,MAAM,IAAI,CACV,cAAc,IAAI,AACtB,CAAC,AACH,CAAC\"}"
 };
 
 const Portfolio = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
@@ -1081,7 +1082,7 @@ const Portfolio = create_ssr_component(($$result, $$props, $$bindings, $$slots) 
 
 	return `<h1>Apps &amp; Websites</h1>
 <div class="${"textBlock"}">
-  <p>These are some of the apps/websites that I&#39;ve worked on.</p>
+  <p>Here are some of my projects outside of work.</p>
 </div>
 <div class="${"portfolioContainer svelte-ot4zjt"}">
   <div class="${"portfolioItem svelte-ot4zjt"}">
@@ -1112,43 +1113,43 @@ const Portfolio = create_ssr_component(($$result, $$props, $$bindings, $$slots) 
 
 <h1>Music</h1>
 <div class="${"textBlock"}">
-  <p>I also enjoying recording music- here are some albums I&#39;ve released.</p>
+  <p>I also enjoy recording- here are some albums I&#39;ve released.</p>
 </div>
 <div class="${"portfolioContainer svelte-ot4zjt"}">
-  <div class="${"musicItem svelte-ot4zjt"}">
-    <a target="${"_blank"}" href="${"https://poolhouselp.com"}">
-      <img alt="${""}" src="${"/images/music/poolhouselp.jpg"}" class="${"svelte-ot4zjt"}">
-    </a>
-    <span>poolhouse lp</span>
-    <span class="${"portfolioDate svelte-ot4zjt"}">May 10, 2020</span>
-  </div>
   <div class="${"musicItem svelte-ot4zjt"}">
     <a target="${"_blank"}" href="${"https://familyfilm.net"}">
       <img alt="${""}" src="${"/images/music/familyfilm.jpg"}" class="${"svelte-ot4zjt"}">
     </a>
     <span>family film</span>
-    <span class="${"portfolioDate svelte-ot4zjt"}">May 10, 2020</span>
+    <span class="${"portfolioDate svelte-ot4zjt"}">July 2020 (soon!)</span>
+  </div>
+  <div class="${"musicItem svelte-ot4zjt"}">
+    <a target="${"_blank"}" href="${"https://poolhouselp.com"}">
+      <img alt="${""}" src="${"/images/music/poolhouselp.jpg"}" class="${"svelte-ot4zjt"}">
+    </a>
+    <span>poolhouse lp</span>
+    <span class="${"portfolioDate svelte-ot4zjt"}">May 2020</span>
   </div>
   <div class="${"musicItem svelte-ot4zjt"}">
     <a target="${"_blank"}" href="${"https://thebreakersproject.bandcamp.com/"}">
       <img alt="${""}" src="${"/images/music/4songsfromprovidence.jpg"}" class="${"svelte-ot4zjt"}">
     </a>
     <span>4 songs from pvd</span>
-    <span class="${"portfolioDate svelte-ot4zjt"}">May 10, 2020</span>
+    <span class="${"portfolioDate svelte-ot4zjt"}">Dec 2018</span>
   </div>
   <div class="${"musicItem svelte-ot4zjt"}">
     <a target="${"_blank"}" href="${"https://heythisischris.bandcamp.com/album/canvas-face"}">
       <img alt="${""}" src="${"/images/music/canvasface.jpg"}" class="${"svelte-ot4zjt"}">
     </a>
     <span>canvas face</span>
-    <span class="${"portfolioDate svelte-ot4zjt"}">May 10, 2020</span>
+    <span class="${"portfolioDate svelte-ot4zjt"}">Oct 2016</span>
   </div>
   <div class="${"musicItem svelte-ot4zjt"}">
     <a target="${"_blank"}" href="${"https://heythisischris.bandcamp.com/album/lightheaded"}">
       <img alt="${""}" src="${"/images/music/lightheaded.jpg"}" class="${"svelte-ot4zjt"}">
     </a>
     <span>lightheaded</span>
-    <span class="${"portfolioDate svelte-ot4zjt"}">May 10, 2020</span>
+    <span class="${"portfolioDate svelte-ot4zjt"}">Feb 2013</span>
   </div>
 </div>`;
 });
@@ -1288,7 +1289,7 @@ const Resume = create_ssr_component(($$result, $$props, $$bindings, $$slots) => 
 
 const css$1 = {
 	code: ".textarea.svelte-110ujhe{width:90%;height:125px;font-family:Arial;padding:5px}.input.svelte-110ujhe{width:90%;padding:5px}.send.svelte-110ujhe{width:90%;text-align:right}.sendButton.svelte-110ujhe{padding:10px 20px}@media only screen and (max-width: 850px){.textarea.svelte-110ujhe{width:90%}.input.svelte-110ujhe{width:90%}.send.svelte-110ujhe{width:90%}}",
-	map: "{\"version\":3,\"file\":\"Contact.svelte\",\"sources\":[\"Contact.svelte\"],\"sourcesContent\":[\"<style>\\n  .textarea {\\n    width: 90%;\\n    height: 125px;\\n    font-family: Arial;\\n    padding: 5px;\\n  }\\n  .input {\\n    width: 90%;\\n    padding: 5px;\\n  }\\n  .send {\\n    width: 90%;\\n    text-align: right;\\n  }\\n  .sendButton {\\n    padding: 10px 20px;\\n  }\\n  @media only screen and (max-width: 850px) {\\n    .textarea {\\n      width: 90%;\\n    }\\n    .input {\\n      width: 90%;\\n    }\\n    .send {\\n      width: 90%;\\n    }\\n  }\\n</style>\\n\\n<div class=\\\"mainbarAndSidebarContainer\\\">\\n  <div class=\\\"mainbar\\\">\\n    <h1>Name</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>Christopher James Aitken (I'm 25, btw)</p>\\n    </div>\\n\\n    <h1>Email</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>\\n        <a target=\\\"_blank\\\" href=\\\"mailto:chris@heythisischris.com\\\">\\n          chris@heythisischris.com\\n        </a>\\n      </p>\\n    </div>\\n\\n    <h1>Leave me a message</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>\\n        <input class=\\\"input\\\" placeholder=\\\"Name\\\" />\\n      </p>\\n      <p>\\n        <input class=\\\"input\\\" placeholder=\\\"Email\\\" />\\n      </p>\\n      <p>\\n        <textarea class=\\\"textarea\\\" placeholder=\\\"Message\\\" />\\n      </p>\\n      <p class=\\\"send\\\">\\n        <button\\n          class=\\\"sendButton\\\"\\n          onclick=\\\"alert('Sorry, this feature doesn\\\\'t work yet!')\\\">\\n          Send\\n        </button>\\n      </p>\\n    </div>\\n  </div>\\n\\n  <div class=\\\"sidebar\\\">\\n    <h1>Response ETA?</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>Usually within a few hours, I check my email pretty frequently.</p>\\n    </div>\\n  </div>\\n</div>\\n\"],\"names\":[],\"mappings\":\"AACE,SAAS,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,KAAK,CACb,WAAW,CAAE,KAAK,CAClB,OAAO,CAAE,GAAG,AACd,CAAC,AACD,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,GAAG,AACd,CAAC,AACD,KAAK,eAAC,CAAC,AACL,KAAK,CAAE,GAAG,CACV,UAAU,CAAE,KAAK,AACnB,CAAC,AACD,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CAAC,IAAI,AACpB,CAAC,AACD,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzC,SAAS,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,KAAK,eAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACZ,CAAC,AACH,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Contact.svelte\",\"sources\":[\"Contact.svelte\"],\"sourcesContent\":[\"<style>\\n  .textarea {\\n    width: 90%;\\n    height: 125px;\\n    font-family: Arial;\\n    padding: 5px;\\n  }\\n  .input {\\n    width: 90%;\\n    padding: 5px;\\n  }\\n  .send {\\n    width: 90%;\\n    text-align: right;\\n  }\\n  .sendButton {\\n    padding: 10px 20px;\\n  }\\n  @media only screen and (max-width: 850px) {\\n    .textarea {\\n      width: 90%;\\n    }\\n    .input {\\n      width: 90%;\\n    }\\n    .send {\\n      width: 90%;\\n    }\\n  }\\n</style>\\n\\n<div class=\\\"mainbarAndSidebarContainer\\\">\\n  <div class=\\\"mainbar\\\">\\n    <h1>Name</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>Christopher James Aitken (I'm 25, he/him)</p>\\n    </div>\\n\\n    <h1>Email</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>\\n        <a target=\\\"_blank\\\" href=\\\"mailto:chris@heythisischris.com\\\">\\n          chris@heythisischris.com\\n        </a>\\n      </p>\\n    </div>\\n    \\n\\n    <div id=\\\"mobileSocialMedia\\\">\\n      <h1>Social Media</h1>\\n      <div class=\\\"textBlock\\\">\\n        <p>\\n            <a target=\\\"_blank\\\" href=\\\"https://github.com/heythisischris\\\"><img class=\\\"socialIcon\\\" alt=\\\"github\\\" src=\\\"images/github.svg\\\"></a>\\n            <a target=\\\"_blank\\\" href=\\\"https://www.linkedin.com/in/chris-aitken-293045183/\\\"><img class=\\\"socialIcon\\\" alt=\\\"linkedin\\\" src=\\\"images/linkedin.svg\\\"></a>\\n            <a target=\\\"_blank\\\" href=\\\"https://www.instagram.com/heythisischris/\\\"><img class=\\\"socialIcon\\\" alt=\\\"instagram\\\" src=\\\"images/instagram.svg\\\"></a>\\n            <a target=\\\"_blank\\\" href=\\\"https://www.facebook.com/chrisaitken\\\"><img class=\\\"socialIcon\\\" alt=\\\"bandcamp\\\" src=\\\"images/facebook.svg\\\"></a>\\n        </p>\\n      </div>\\n    </div>\\n\\n    <h1>Leave me a message</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>\\n        <input class=\\\"input\\\" placeholder=\\\"Name\\\" />\\n      </p>\\n      <p>\\n        <input class=\\\"input\\\" placeholder=\\\"Email\\\" />\\n      </p>\\n      <p>\\n        <textarea class=\\\"textarea\\\" placeholder=\\\"Message\\\" />\\n      </p>\\n      <p class=\\\"send\\\">\\n        <button\\n          class=\\\"sendButton\\\"\\n          onclick=\\\"alert('Sorry, this feature doesn\\\\'t work yet!')\\\">\\n          Send\\n        </button>\\n      </p>\\n    </div>\\n  </div>\\n\\n  <div class=\\\"sidebar\\\">\\n    <h1>Response ETA?</h1>\\n    <div class=\\\"textBlock\\\">\\n      <p>Usually within a few hours, I check my email pretty frequently.</p>\\n    </div>\\n  </div>\\n</div>\\n\"],\"names\":[],\"mappings\":\"AACE,SAAS,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,KAAK,CACb,WAAW,CAAE,KAAK,CAClB,OAAO,CAAE,GAAG,AACd,CAAC,AACD,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,GAAG,AACd,CAAC,AACD,KAAK,eAAC,CAAC,AACL,KAAK,CAAE,GAAG,CACV,UAAU,CAAE,KAAK,AACnB,CAAC,AACD,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CAAC,IAAI,AACpB,CAAC,AACD,OAAO,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzC,SAAS,eAAC,CAAC,AACT,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,GAAG,AACZ,CAAC,AACD,KAAK,eAAC,CAAC,AACL,KAAK,CAAE,GAAG,AACZ,CAAC,AACH,CAAC\"}"
 };
 
 const Contact = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
@@ -1298,7 +1299,7 @@ const Contact = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
   <div class="${"mainbar"}">
     <h1>Name</h1>
     <div class="${"textBlock"}">
-      <p>Christopher James Aitken (I&#39;m 25, btw)</p>
+      <p>Christopher James Aitken (I&#39;m 25, he/him)</p>
     </div>
 
     <h1>Email</h1>
@@ -1308,6 +1309,19 @@ const Contact = create_ssr_component(($$result, $$props, $$bindings, $$slots) =>
           chris@heythisischris.com
         </a>
       </p>
+    </div>
+    
+
+    <div id="${"mobileSocialMedia"}">
+      <h1>Social Media</h1>
+      <div class="${"textBlock"}">
+        <p>
+            <a target="${"_blank"}" href="${"https://github.com/heythisischris"}"><img class="${"socialIcon"}" alt="${"github"}" src="${"images/github.svg"}"></a>
+            <a target="${"_blank"}" href="${"https://www.linkedin.com/in/chris-aitken-293045183/"}"><img class="${"socialIcon"}" alt="${"linkedin"}" src="${"images/linkedin.svg"}"></a>
+            <a target="${"_blank"}" href="${"https://www.instagram.com/heythisischris/"}"><img class="${"socialIcon"}" alt="${"instagram"}" src="${"images/instagram.svg"}"></a>
+            <a target="${"_blank"}" href="${"https://www.facebook.com/chrisaitken"}"><img class="${"socialIcon"}" alt="${"bandcamp"}" src="${"images/facebook.svg"}"></a>
+        </p>
+      </div>
     </div>
 
     <h1>Leave me a message</h1>
@@ -1368,7 +1382,6 @@ const App = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
           <a target="${"_blank"}" href="${"https://www.linkedin.com/in/chris-aitken-293045183/"}"><img class="${"socialIcon"}" alt="${"linkedin"}" src="${"images/linkedin.svg"}"></a>
           <a target="${"_blank"}" href="${"https://www.instagram.com/heythisischris/"}"><img class="${"socialIcon"}" alt="${"instagram"}" src="${"images/instagram.svg"}"></a>
           <a target="${"_blank"}" href="${"https://www.facebook.com/chrisaitken"}"><img class="${"socialIcon"}" alt="${"bandcamp"}" src="${"images/facebook.svg"}"></a>
-          <a target="${"_blank"}" href="${"https://heythisischris.bandcamp.com/"}"><img class="${"socialIcon"}" alt="${"bandcamp"}" src="${"images/bandcamp.svg"}"></a>
         </div>
       </div>
     </nav>
