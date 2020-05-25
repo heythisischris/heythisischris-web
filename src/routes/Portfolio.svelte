@@ -58,7 +58,7 @@
 
 <h1>Apps & Websites</h1>
 <div class="textBlock">
-  <p>Here are some of my projects outside of work.</p>
+  <p>Here are some of my projects outside of work:</p>
 </div>
 <div class="portfolioContainer">
   <div class="portfolioItem">
@@ -95,7 +95,7 @@
 
 <h1>Music</h1>
 <div class="textBlock">
-  <p>I also enjoy recording- here are some albums I've released.</p>
+  <p>I also enjoy recording. Here are some albums I've released:</p>
 </div>
 <div class="portfolioContainer">
   <div class="musicItem">

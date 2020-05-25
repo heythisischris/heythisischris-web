@@ -5,6 +5,7 @@
   import Portfolio from "./routes/Portfolio.svelte";
   import Resume from "./routes/Resume.svelte";
   import Contact from "./routes/Contact.svelte";
+  import Post from "./routes/Post.svelte";
 
   // Used for SSR. A falsy value is ignored by the Router.
   export let url = "";
@@ -38,6 +39,7 @@
       <Route path="portfolio" component={Portfolio} />
       <Route path="resume" component={Resume} />
       <Route path="contact" component={Contact} />
+      <Route path="post" component={Post} />
     </div>
   </div>
   <div class="footer">Copyright © 2020 Chris Aitken</div>
