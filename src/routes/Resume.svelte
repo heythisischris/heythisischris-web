@@ -111,16 +111,19 @@
 <h1>Skills</h1>
 <div class="textBlock">
   <p>
-    <strong>Cloud Environments:</strong>
-    AWS (strongest), DigitalOcean, Azure<br>
+    <strong>IaaS:</strong>
+    AWS (most familiar), Azure, DigitalOcean<br>
+    <strong>BaaS:</strong>
+    AWS Amplify, Hasura, Firebase, Parse (RIP)<br>
     <strong>Languages:</strong>
-    JavaScript, React, React Native, Angular, PHP, ASP, C# (.NET), Java, Swift,
-    Obj-C, C++<br>
+    JavaScript (node and browser), Swift, Objective C, PHP, ASP, C#<br>
+    <strong>Frameworks:</strong>
+    React Native (using Expo), React, Angular, Wordpress, Zend<br>
     <strong>Databases:</strong>
     MySQL, PostgreSQL, MongoDB, DynamoDB<br>
-    <strong>IDEs and Software:</strong>
-    VS Code, Git Bash, Xcode, Notepad++, Android Studio<br>
-    <strong>Languages:</strong>
-    Spanish (fluent)
+    <strong>IDEs:</strong>
+    VS Code, Xcode, Android Studio<br>
+    <strong>Idiomas:</strong>
+    Español
   </p>
 </div>

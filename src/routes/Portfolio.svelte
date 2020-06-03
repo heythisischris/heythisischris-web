@@ -48,12 +48,12 @@
     text-decoration: none;
     color: #000000;
   }
-@media only screen and (max-width: 850px) {
-  .portfolioItem {
-      width:100%;
-      margin-bottom:30px;
+  @media only screen and (max-width: 850px) {
+    .portfolioItem {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
-}
 </style>
 
 <h1>Apps & Websites</h1>
@@ -65,13 +65,13 @@
     <a target="_blank" href="https://place4pals.com">
       <img alt="" src="/images/apps/place4pals.jpg" />
     </a>
-    <div>
-      <a class="noLinkColor" target="_blank" href="https://place4pals.com">
+    <a class="noLinkColor" target="_blank" href="https://place4pals.com">
+      <div>
         <span>place4pals</span>
-      </a>
-      <span class="portfolioDate">Minimalist social media service</span>
-      <span class="portfolioDate">Built with React Native and Hasura</span>
-    </div>
+        <span class="portfolioDate">Minimalist social media service</span>
+        <span class="portfolioDate">Built with React Native and Hasura</span>
+      </div>
+    </a>
   </div>
   <div class="portfolioItem">
     <a target="_blank" href="https://guardianbrothers.com">
@@ -80,16 +80,15 @@
         src="/images/apps/guardianbrothers.svg"
         style="height:auto;" />
     </a>
-    <div>
-      <a
-        class="noLinkColor"
-        target="_blank"
-        href="https://guardianbrothers.com">
+    <a class="noLinkColor" target="_blank" href="https://guardianbrothers.com">
+      <div>
         <span>Guardian Brothers Holdings</span>
-      </a>
-      <span class="portfolioDate">Front-facing website for a mutual fund</span>
-      <span class="portfolioDate">Built with Svelte</span>
-    </div>
+        <span class="portfolioDate">
+          Front-facing website for a mutual fund
+        </span>
+        <span class="portfolioDate">Built with Svelte</span>
+      </div>
+    </a>
   </div>
 </div>
 

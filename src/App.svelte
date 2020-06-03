@@ -42,5 +42,5 @@
       <Route path="post" component={Post} />
     </div>
   </div>
-  <div class="footer">Copyright © 2020 Chris Aitken</div>
+  <div class="footer">Copyright © {new Date().getFullYear()} Chris Aitken</div>
 </Router>

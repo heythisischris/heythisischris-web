@@ -22,7 +22,7 @@
   <div class="mainbar">
     <h1>Who is Chris?</h1>
     <div class="textBlock">
-      <p>I'm a software developer from Miami, FL.</p>
+      <p>I'm a software developer based in Miami, FL.</p>
     </div>
     <h1>What does Chris do now?</h1>
     <div class="textBlock">
@@ -50,11 +50,12 @@
       {#each githubFeed as item}
         <div class="commitBlock" in:fade>
           <p>
-            <a target="_blank" href={item.link}>
-              {new Date(item.isoDate.replace(/ /g, 'T')).toLocaleString('en-US', localeStringOptions)}
+            <a target="_blank" href={item.commitUrl}>
+              {item.repo}
             </a>
           </p>
-          <p style="margin-top:-15px;">{item.title}</p>
+          <p style="margin-top: -15px;font-size: 11px;color: #666666;">{new Date(item.date.replace(/ /g, 'T')).toLocaleString('en-US', localeStringOptions)}</p>
+          <p style="margin-top: -7px;font-size: 11px;">{item.commit}</p>
         </div>
       {/each}
     {/await}

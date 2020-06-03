@@ -122,7 +122,7 @@
   <div class="sidebar">
     <h1>Response ETA?</h1>
     <div class="textBlock">
-      <p>Usually within a few hours, I check my email pretty frequently.</p>
+      <p>Usually within an hour, I check my email pretty frequently.</p>
     </div>
   </div>
 </div>
