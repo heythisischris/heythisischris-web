@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { navigate } from "svelte-routing";
   import { fade } from "svelte/transition";
   let localeStringOptions = {
@@ -95,7 +95,7 @@
         on:click={() => {
           navigate(`post?guid=${item.link}`);
         }}>
-        <a href="javascript:void(0)">{item.title}</a>
+        <a href={"#"}>{item.title}</a>
         <span>
           {new Date(item.isoDate.replace(/ /g, 'T')).toLocaleString('en-US', localeStringOptions)}
         </span>
@@ -106,14 +106,14 @@
       <div class="newsComment">
         <div class="newsCommentTopBar">
           <a
-            href="javascript:void(0)"
+            href={"#"}
             on:click={() => {
               showComments(item.guid, false);
             }}>
             {item.commentCount} comment{item.commentCount === '1' ? '' : 's'}
           </a>
           <a
-            href="javascript:void(0)"
+            href={"#"}
             on:click={() => {
               showComments(item.guid, true);
             }}>
@@ -127,7 +127,7 @@
               says: {comment.comment}
               {#if comment.canDelete}
                 <a
-                  href="javascript:void(0)"
+                  href={"#"}
                   on:click={() => {
                     deleteComment(comment.id, item.guid);
                   }}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let name = "";
   let email = "";
   let message = "";
@@ -48,7 +48,7 @@
   <div class="mainbar">
     <h1>Name</h1>
     <div class="textBlock">
-      <p>Christopher James Aitken (I'm 25)</p>
+      <p>Christopher James Aitken (I'm 26)</p>
     </div>
 
     <h1>Email</h1>

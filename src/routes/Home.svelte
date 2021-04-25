@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { fade } from "svelte/transition";
   import Feed from "./Feed.svelte";
   let localeStringOptions = {
@@ -29,7 +29,7 @@
       <p>
         I work at
         <a target="_blank" href="https://teckpert.com">TECKpert</a>. In my spare-time, I'm building
-        <a target="_blank" href="https://place4pals.com">place4pals</a>.
+        <a target="_blank" href="https://place4pals.com">place4pals</a> and <a target="_blank" href="https://productabot.com">productabot</a>.
       </p>
     </div>
 

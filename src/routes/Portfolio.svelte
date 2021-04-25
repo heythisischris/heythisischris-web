@@ -102,7 +102,7 @@
       <img alt="" src="/images/music/familyfilm.jpg" />
     </a>
     <span>family film</span>
-    <span class="portfolioDate">July 2020 (soon!)</span>
+    <span class="portfolioDate">July 2020</span>
   </div>
   <div class="musicItem">
     <a target="_blank" href="https://poolhouselp.com">
@@ -121,7 +121,7 @@
   <div class="musicItem">
     <a
       target="_blank"
-      href="https://heythisischris.bandcamp.com/album/canvas-face">
+      href="https://familyfilm.bandcamp.com/album/canvas-face">
       <img alt="" src="/images/music/canvasface.jpg" />
     </a>
     <span>canvas face</span>
@@ -130,7 +130,7 @@
   <div class="musicItem">
     <a
       target="_blank"
-      href="https://heythisischris.bandcamp.com/album/lightheaded">
+      href="https://familyfilm.bandcamp.com/album/lightheaded">
       <img alt="" src="/images/music/lightheaded.jpg" />
     </a>
     <span>lightheaded</span>

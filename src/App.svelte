@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Router, Route } from "svelte-routing";
   import NavLink from "./components/NavLink.svelte";
   import Home from "./routes/Home.svelte";
@@ -6,8 +6,6 @@
   import Resume from "./routes/Resume.svelte";
   import Contact from "./routes/Contact.svelte";
   import Post from "./routes/Post.svelte";
-
-  // Used for SSR. A falsy value is ignored by the Router.
   export let url = "";
 </script>
 <Router {url}>
@@ -21,10 +19,10 @@
           <NavLink to="/">heythisischris</NavLink>
         </div>
         <div class="navLinks">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="portfolio">Portfolio</NavLink>
-          <NavLink to="resume">Resume</NavLink>
-          <NavLink to="contact">Contact</NavLink>
+          <NavLink to="/"><span style="color:#4F9DF7;">●</span> Home</NavLink>
+          <NavLink to="portfolio"><span style="color:#830D7C;">●</span> Portfolio</NavLink>
+          <NavLink to="resume"><span style="color:#4f7f42;">●</span> Resume</NavLink>
+          <NavLink to="contact"><span style="color:#A0A0A0;">●</span> Contact</NavLink>
         </div>
         <div class="navSocial">
           <a target="_blank" href="https://github.com/heythisischris"><img class="socialIcon" alt="github" src="images/github.svg"></a>
