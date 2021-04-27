@@ -287,7 +287,7 @@ hr {
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1064px) {
   body {
     background-color: #ffffff;
   }

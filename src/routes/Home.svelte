@@ -7,7 +7,7 @@
     year: "numeric",
     hour: "numeric",
     minute: "numeric",
-    hour12: true
+    hour12: true,
   };
   async function loadRss(url) {
     let data = await fetch(url);
@@ -28,8 +28,10 @@
     <div class="textBlock">
       <p>
         I work at
-        <a target="_blank" href="https://teckpert.com">TECKpert</a>. In my spare-time, I'm building
-        <a target="_blank" href="https://place4pals.com">place4pals</a> and <a target="_blank" href="https://productabot.com">productabot</a>.
+        <a target="_blank" href="https://teckpert.com"><img alt="" src="/images/apps/teckpert.svg" width=20 height=20 style="margin-right:2px;margin-bottom:-6px;" />TECKpert</a>. In my
+        spare-time, I'm building
+        <a target="_blank" href="https://place4pals.com"><img alt="" src="/images/apps/place4pals.svg" width=20 height=20 style="margin-right:2px;margin-bottom:-4px;" />place4pals</a> and
+        <a target="_blank" href="https://productabot.com"><img alt="" src="/images/apps/productabot.svg" width=20 height=20 style="margin-right:2px;margin-bottom:-4px;" />productabot</a>.
       </p>
     </div>
 
@@ -53,8 +55,17 @@
             <a target="_blank" href={item.commitUrl}>
               {item.repo}
             </a>
+            <span
+              style="background-color:#999999;color:#ffffff;font-size:8px;padding:2px 4px;border-radius:6px;"
+              >{item.branch.toUpperCase().slice(0, 10)}</span
+            >
           </p>
-          <p style="margin-top: -15px;font-size: 11px;color: #666666;">{new Date(item.date.replace(/ /g, 'T')).toLocaleString('en-US', localeStringOptions)}</p>
+          <p style="margin-top: -15px;font-size: 11px;color: #666666;">
+            {new Date(item.date.replace(/ /g, "T")).toLocaleString(
+              "en-US",
+              localeStringOptions
+            )}
+          </p>
           <p style="margin-top: -7px;font-size: 11px;">{item.commit}</p>
         </div>
       {/each}
