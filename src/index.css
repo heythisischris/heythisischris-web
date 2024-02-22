@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: #ffffff;
+        --text: #000000;
+        --subtitle: #666666;
+        --card: #eaf2f8;
+        --selected: #aaaaaa;
+        --border: #000000;
+        --green: #19a034;
+        --red: #ff0000;
+        --purple: #800080;
+        --blue: #160ae9;
+        --lightblue: #dae3e9;
+
+        --focus-border: var(--green);
+        --separator-border: #66666666;
+    }
+
+    :root[class~="dark"] {
+        --background: #000000;
+        --text: #ffffff;
+        --subtitle: #999999;
+        --card: #333333;
+        --selected: #666666;
+        --border: #ffffff;
+        --green: #1DCA3F;
+        --red: #ff0000;
+        --purple: #800080;
+        --blue: #72bfff;
+        --lightblue: #dae3e9;
+    }
+}
+
+body {
+    background-color: var(--background);
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 20px;
+    border: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #66666666;
+    border-radius: 20px;
+    border: transparent;
+}
+
+ol,
+ul {
+    list-style-type: "• ";
+    margin-inline-start: 10px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-bottom: 10px;
+}
+
+.ProseMirror {
+    outline: none;
+    height: 100%;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.feed p {
+    margin-bottom: 10px;
+}
+
+
+ul>li {
+    margin-inline-start: 16px;
+    list-style-type: "⤷ ";
+}
+
+.icon {
+    display: inline-block;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+
+p {
+    text-indent: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    float: right;
+    max-width: 320px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+code {
+    color: #ff0000;
+    background-color: #eeeeee;
+    padding: 0px 4px;
+    border-radius: 8px;
+}
