@@ -1,10 +1,11 @@
-import { formatDate } from '#src/utils';
+import { formatDate, useIsMobile } from '#src/utils';
 import { useQuery } from "@tanstack/react-query";
 import * as API from "aws-amplify/api";
 const apiClient = API.generateClient();
 import { motion } from "framer-motion"
 
 export const Commits = () => {
+    const isMobile = useIsMobile();
     const { data: commits } = useQuery({
         queryKey: ["commits"],
         queryFn: async () => (await apiClient.graphql({
@@ -30,31 +31,28 @@ export const Commits = () => {
         }
     }
 
-    return <div className='sm:w-[calc(33%_-_10px)] p-2'>
+    return <div className='sm:w-[calc(33%_-_10px)] p-4 pt-0'>
         <motion.div className='font-bold text-xl mb-2'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}>Recent contributions</motion.div>
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}>Recent contributions</motion.div>
         <div className='flex flex-col gap-4'>
             {commits?.map((commit, index) =>
-                <motion.div key={index} className='shadow-[2px_2px_0_1px_#000] border-text border-[1px] rounded-md'
+                <motion.div key={index} className='shadow-[2px_2px_0_1px] shadow-border border-text border-[1px] rounded-md'
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut", delay: index / 10 }}
+                    transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : index / 10 }}
                 >
-                    <a className="hover:no-underline flex bg-card px-2 py-1 rounded-t-md border-b-[1px] border-border" target="_blank" href={commit.commit_url}>
+                    <a style={{ textDecorationLine: 'none' }} className="hover:opacity-50 flex bg-card px-2 py-1 rounded-t-md border-b-[1px] border-border" target="_blank" href={commit.commit_url}>
                         <div className="flex flex-row gap-1">
                             <img alt="" src={returnRepoImage(commit.repo)} className="h-8 w-8" />
                             <div className="flex flex-col">
-                                <a className="mt-[-3px]" target="_blank" href={commit.commit_url}
-                                >{commit.repo}</a
-                                >
+                                <span className="mt-[-3px]">{commit.repo}</span>
                                 <div className="text-[#666] text-xs mt-[-5px]">
                                     {formatDate(commit.created_at)}
                                 </div>
                             </div>
-                        </div></a
-                    >
+                        </div></a>
                     <div className='text-sm px-2 py-1'>{commit.commit}</div>
                 </motion.div>)}
         </div>

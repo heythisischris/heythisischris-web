@@ -9,12 +9,13 @@
         --subtitle: #666666;
         --card: #eaf2f8;
         --selected: #aaaaaa;
-        --border: #000000;
+        --border: #333;
         --green: #19a034;
         --red: #ff0000;
         --purple: #800080;
         --blue: #160ae9;
         --lightblue: #dae3e9;
+        --body: #dae3e9;
 
         --focus-border: var(--green);
         --separator-border: #66666666;
@@ -26,17 +27,18 @@
         --subtitle: #999999;
         --card: #333333;
         --selected: #666666;
-        --border: #ffffff;
+        --border: #999;
         --green: #1DCA3F;
         --red: #ff0000;
         --purple: #800080;
         --blue: #72bfff;
         --lightblue: #dae3e9;
+        --body: #2b3237;
     }
 }
 
 body {
-    background-color: var(--background);
+    background-color: var(--body);
     overflow-y: scroll;
 }
 

@@ -58,6 +58,7 @@ export default {
         border: 'var(--border)',
         blue: 'var(--blue)',
         lightblue: 'var(--lightblue)',
+        body: 'var(--body)',
       },
     },
   },
