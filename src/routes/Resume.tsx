@@ -30,7 +30,7 @@ export const Resume = () => {
         sectionHeader: `bg-card px-2 py-1 font-bold rounded-t-md border-b-[1px] border-border`,
         sectionInner: `px-2 py-1 relative flex flex-col gap-1 my-2`,
         sectionDate: `xl:absolute right-2 font-bold text-subtitle`,
-        sectionImage: `inline w-[20px] h-[20px] mr-[3px] mt-[-2px] rounded-md`,
+        sectionImage: `inline w-[20px] h-[20px] mr-[3px] mt-[-2px] rounded-md hidden`,
         button: `px-2 py-0 border-[2px] border-border w-fit font-bold bg-[#ff0]`,
         button2: `px-2 py-1 border-[2px] border-border w-fit font-bold bg-card border-t-[#eee] border-l-[#eee]`,
     }
@@ -175,7 +175,7 @@ export const Resume = () => {
                                     <div className="text-[#666] text-xs">
                                         {`${testimonial.author_position} at `}
                                         <a href={`/portfolio/${testimonial?.company_name.toLowerCase()}`}>
-                                            <img alt="" src={testimonial?.company_image} className="icon" />
+                                            {/* <img alt="" src={testimonial?.company_image} className="icon" /> */}
                                             {testimonial.company_name}
                                         </a>
                                     </div>

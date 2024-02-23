@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import * as API from "aws-amplify/api";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const apiClient = API.generateClient();
 import { motion } from "framer-motion"
 import { useIsMobile } from '#src/utils';
@@ -38,7 +38,6 @@ export const Portfolio = () => {
 
 const AppTile = ({ app, index }) => {
     const isMobile = useIsMobile();
-    const navigate = useNavigate();
     return <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -46,7 +45,6 @@ const AppTile = ({ app, index }) => {
         className='w-full sm:w-[calc(50%_-_20px)] lg:w-[calc(33%_-_20px)] flex flex-col gap-2 hover:no-underline text-text p-4 rounded-md border-[1px] border-border shadow-[2px_2px_0_1px] shadow-border'
     >
         <Link
-            onTouchStart={() => navigate(`/portfolio/${app?.slug}`)}
             to={`/portfolio/${app?.slug}`}
             className="text-text hover:opacity-50"
             style={{ textDecorationLine: 'none' }}

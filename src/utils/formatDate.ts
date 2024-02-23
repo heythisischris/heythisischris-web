@@ -7,4 +7,4 @@ export const formatDate = (date) => `${new Date(date)
         hour: 'numeric',
         minute: 'numeric',
         hour12: true
-    })} ET`
+    })?.replaceAll(' PM', 'pm')?.replaceAll(' AM', 'am')}`
