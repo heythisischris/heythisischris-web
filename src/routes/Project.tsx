@@ -34,11 +34,11 @@ export const Project = () => {
             <motion.div initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className="flex flex-row gap-2 shadow-[2px_2px_0_1px] shadow-border border-text border-[1px] rounded-md px-2 py-1">
-                <img
+                {project?.image ? <img
                     alt=""
                     src={`/${project?.image}`}
                     className="h-20 w-20 rounded-xl"
-                />
+                /> : <div className='h-20 w-20 bg-card rounded-xl' />}
                 <div className="flex flex-col">
                     <div className="text-xl">{project?.name}</div>
                     <div>{project?.subtitle}</div>

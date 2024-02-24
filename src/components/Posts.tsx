@@ -41,12 +41,12 @@ const Post = ({ post, index }) => {
     const contentOverflow = useIsOverflow(contentRef);
     const isMobile = useIsMobile();
     const [expanded, setExpanded] = useState(!!postId);
-    const maxHeight = expanded ? 800 : 200;
+    const maxHeight = expanded ? (isMobile ? 2000 : 1000) : (isMobile ? 400 : 200);
     return <motion.div key={index} ref={contentRef}
         className={`shadow-[2px_2px_0_1px] shadow-border border-text border-[1px] rounded-md max-h-[200px] ${expanded && 'max-h-[2000px]'} overflow-y-clip relative`}
         initial={{ opacity: 0, y: -10, maxHeight }}
         animate={{ opacity: 1, y: 0, maxHeight }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : index / 10 }}>
+        transition={{ duration: 0.5, ease: "easeOut", delay: (isMobile || expanded) ? 0 : index / 10 }}>
         {(contentOverflow && !expanded) && <div onClick={() => setExpanded(true)} className={`cursor-pointer hover:text-[#6666] bg-gradient-to-b to-75% from-[#ffffff00] to-background w-full h-[100px] bottom-0 absolute flex flex-col justify-end items-center font-bold text-subtitle pb-1`}>+ See more</div>}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between bg-card px-2 py-1 rounded-t-md border-b-[1px] border-border">
             <Link className="font-bold text-xl text-text w-full flex flex-wrap items-center justify-between hover:opacity-50" to={`/posts/${post.slug}`} style={{ textDecorationLine: 'none' }}

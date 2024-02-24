@@ -30,6 +30,11 @@ export const Navigation = () => {
         }`}))?.data?.links,
     })
 
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location])
+
     return (
         <div className={`bg-background text-text leading-7`}>
             {loading && <Loader />}
@@ -41,17 +46,17 @@ export const Navigation = () => {
                 >
                     {links?.map((link, index) => {
                         const domain = link?.source_link?.split('https://')?.[1]?.split('/')?.[0];
-                        return <a title={link?.description} style={{ textDecorationLine: 'none' }} className='text-xs mx-4 text-text hover:opacity-50 flex flex-row gap-1 items-center' target="_blank" href={link?.link} key={index}><span className='text-subtitle font-bold'>{new Date(link?.created_at).toLocaleString('en-US', {
+                        return <a title={link?.description} style={{ textDecorationLine: 'none' }} className='text-xs text-text hover:opacity-50 flex flex-row gap-1 items-center' target="_blank" href={link?.link} key={index}><span className='text-subtitle font-bold'>{new Date(link?.created_at).toLocaleString('en-US', {
                             month: 'numeric',
                             day: 'numeric',
                             hour: 'numeric',
                             minute: 'numeric',
                             hour12: true
-                        })?.replaceAll(' PM', 'pm')?.replaceAll(' AM', 'am')}:</span>{link?.title}<span className='text-subtitle flex flex-row'></span></a>
+                        })?.replaceAll(' PM', 'pm')?.replaceAll(' AM', 'am')}:</span>{link?.title}<span className='text-subtitle flex flex-row'></span><span className='text-subtitle mr-4 ml-2'>|</span></a>
                     })}
                 </Marquee>
             </div>
-            <div className='max-w-screen-xl bg-background mx-auto w-full sm:min-h-[100vh] sm:border-border'>
+            <div className='max-w-screen-xl bg-background mx-auto w-full min-h-[100vh] sm:border-border'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
