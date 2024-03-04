@@ -82,10 +82,10 @@ export const Navigation = () => {
                         </div>
                         <div className="flex flex-row items-center justify-between">
                             {[
-                                { label: `☖ Home`, link: `/` },
+                                { label: `☖ Articles`, link: `/` },
                                 { label: `⧉ Portfolio`, link: `/portfolio` },
                                 { label: `≡ Resume`, link: `/resume` },
-                                { label: `⇆ Let's talk`, link: `/request` },
+                                { label: `⇆ Contact`, link: `/request` },
                             ].map((obj, index) =>
                                 <Link
                                     onTouchStart={() => navigate(obj?.link)}

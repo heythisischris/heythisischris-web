@@ -25,10 +25,12 @@ export const Posts = () => {
         {!postId ? <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className='mb-4 border-text border-[1px] rounded-md px-2 py-1'>
-            <div className='mx-2 sm:mx-0'>My name is <b>Christopher Aitken</b>- I'm a senior software engineer with 8+ years experience based out of <a target='_blank' href='https://en.wikipedia.org/wiki/New_Orleans'>New Orleans, LA</a>. I particularly enjoy developing fin-tech apps on AWS using React, Node.js, & PostgreSQL. I also build custom AI integrations using OpenAI, AWS Bedrock, & pgVector. Feel free to take a look around!</div>
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className='mb-4 px-2 py-1'>
+            <div className='mx-2 sm:mx-0'>I'm a senior software engineer with 8+ years experience based out of <a target='_blank' href='https://en.wikipedia.org/wiki/New_Orleans'>New Orleans, LA</a>. I particularly enjoy developing fin-tech apps on AWS using React, Node.js, & PostgreSQL. I also build custom AI integrations using OpenAI, AWS Bedrock, & pgVector. Feel free to take a look around!
+                <div className='text-subtitle text-right'>— Christopher Aitken</div>
+            </div>
         </motion.div> :
-            <Link className='block mb-4' to='/'>← Go back</Link>}
+            <Link className='block mb-4 w-fit' to='/'>← Go back</Link>}
         <div className='flex flex-col gap-4'>
             {posts?.map((post, index) => <Post post={post} index={index} />)}
         </div>

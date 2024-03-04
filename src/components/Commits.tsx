@@ -69,7 +69,7 @@ export const Commits = () => {
                                 >
                                     <a style={{ textDecorationLine: 'none' }} className="hover:opacity-50 flex bg-card px-2 py-1 rounded-t-md border-b-[1px] border-border" target="_blank" href={commit.commit_url}>
                                         <div className="flex flex-row gap-1">
-                                            <img alt="" src={commit?.image} className="h-8 w-8" />
+                                            <img src={commit?.image} className="h-8 w-8 rounded-md" />
                                             <div className="flex flex-col">
                                                 <span className="mt-[-3px]">{commit.repo}</span>
                                                 <div className="text-[#666] text-xs mt-[-5px]">

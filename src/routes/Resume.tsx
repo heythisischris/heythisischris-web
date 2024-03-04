@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import * as API from "aws-amplify/api";
 const apiClient = API.generateClient();
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom';
 
 export const Resume = () => {
     const isMobile = useIsMobile();
@@ -45,9 +46,9 @@ export const Resume = () => {
                         <div className='text-xl text-subtitle'>Senior Software Engineer</div>
                     </div>
                     <div className='flex flex-row gap-2'>
-                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="christopher_aitken_resume.pdf">Download PDF</a>
-                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="https://github.com/heythisischris">GitHub</a>
-                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="https://linkedin.com/in/heythisischris">LinkedIn</a>
+                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="christopher_aitken_resume.pdf" style={{ textDecorationLine: 'none' }}>Download PDF</a>
+                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="https://github.com/heythisischris" style={{ textDecorationLine: 'none' }}>GitHub</a>
+                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="https://linkedin.com/in/heythisischris" style={{ textDecorationLine: 'none' }}>LinkedIn</a>
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: -10 }}
@@ -174,10 +175,10 @@ export const Resume = () => {
                                     >
                                     <div className="text-[#666] text-xs">
                                         {`${testimonial.author_position} at `}
-                                        <a href={`/portfolio/${testimonial?.company_name.toLowerCase()}`}>
+                                        <Link to={`/portfolio/${testimonial?.company_name.toLowerCase()}`}>
                                             {/* <img alt="" src={testimonial?.company_image} className="icon" /> */}
                                             {testimonial.company_name}
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div></a
