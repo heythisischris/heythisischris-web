@@ -18,7 +18,7 @@ export const Navigation = () => {
     useEffect(() => darkMode ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark'), [darkMode]);
 
     useEffectOnce(() => {
-        console.log(`Hey there, fellow developer and/or recruiter!\n\nI developed this React SPA using Vite. Responsive styling is handled via Tailwind CSS, routing via React Router, animation via Framer Motion, & API/Auth calls via AWS Amplify.\n\nYou can browse the source code here: https://github.com/heythisischris/heythisischris-app\n\nIf you have any questions at all, don't be a stranger- shoot me an email (c@htic.io).\n\nCheers,\nChris`)
+        console.log(`Hey there, fellow developer and/or recruiter!\n\nI developed this React SPA using Vite. Responsive styling is handled via Tailwind CSS, routing via React Router, animation via Framer Motion, & API/Auth calls via AWS Amplify.\n\nYou can browse the source code here: https://github.com/heythisischris/heythisischris-web\n\nIf you have any questions at all, don't be a stranger- shoot me an email (c@htic.io).\n\nCheers,\nChris`)
     });
 
     const { data: links } = useQuery({
@@ -56,7 +56,7 @@ export const Navigation = () => {
                     })}
                 </Marquee>
             </div>
-            <div className='max-w-screen-xl bg-background mx-auto w-full min-h-[100vh] sm:border-border'>
+            <div className='max-w-screen-xl bg-background mx-auto w-full min-h-[100vh] sm:border-border pb-12'>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

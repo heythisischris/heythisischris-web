@@ -31,7 +31,7 @@ export const Project = () => {
     return <div className='flex flex-col gap-2 w-full p-4 pt-0'>
         <div className="flex flex-col gap-4">
             <Link className='w-fit' to='/portfolio'>← Go back</Link>
-            <div className='border-border border-[1px] rounded-md shadow-[2px_2px_0_1px] shadow-border px-4 py-2 min-h-[100vh]'>
+            <div className='px-4 py-2 min-h-[100vh]'>
                 <motion.div initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className="flex flex-row gap-2 rounded-md px-2 py-1">
@@ -60,9 +60,13 @@ export const Project = () => {
                         </li>
                     </ul>)}
                 </motion.div>
-                <motion.div initial={{ opacity: 0, y: -10 }}
+                <motion.div
+                    className='flex flex-col gap-2'
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }} dangerouslySetInnerHTML={{ __html: project?.content }} />
+                    transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}
+                    dangerouslySetInnerHTML={{ __html: project?.content }}
+                />
             </div>
         </div>
     </div>

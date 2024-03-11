@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const apiClient = API.generateClient();
 import { motion } from "framer-motion"
 import { useIsMobile } from '#src/utils';
+import { useEffect, useRef, useState } from 'react';
 
 export const Portfolio = () => {
     const isMobile = useIsMobile();
@@ -15,6 +16,12 @@ export const Portfolio = () => {
             }}`
         }))?.data?.apps,
     })
+
+    const [allLoaded, setAllLoaded] = useState(false);
+    useEffect(() => {
+        setTimeout(() => setAllLoaded(true), 500);
+    }, []);
+
     const professionalLength = apps?.filter(obj => !obj.personal)?.length;
     return <div className='flex flex-col gap-2 w-full p-4 pt-0'>
         <motion.div
@@ -23,25 +30,26 @@ export const Portfolio = () => {
             transition={{ duration: isMobile ? 0 : 0.5, ease: "easeOut" }}
             className='font-bold text-xl text-subtitle'>Professional</motion.div>
         <div className='flex flex-wrap gap-x-8 gap-y-4'>
-            {apps?.filter(obj => !obj.personal).map((app, index) => <AppTile key={index} app={app} index={index} />)}
+            {apps?.filter(obj => !obj.personal).map((app, index) => <AppTile key={index} app={app} index={index} allLoaded={allLoaded} />)}
         </div>
         <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
             className='font-bold text-xl text-subtitle mt-12'>Personal</motion.div>
         <div className='flex flex-wrap gap-x-8 gap-y-4'>
-            {apps?.filter(obj => obj.personal).map((app, index) => <AppTile key={index} app={app} index={index + professionalLength} />)}
+            {apps?.filter(obj => obj.personal).map((app, index) => <AppTile key={index} app={app} index={index + professionalLength} allLoaded={allLoaded} />)}
         </div>
     </div>
 }
 
-const AppTile = ({ app, index }) => {
+const AppTile = ({ app, index, allLoaded }) => {
     const isMobile = useIsMobile();
     return <motion.div
+        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : index / 10 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: (isMobile || allLoaded) ? 0 : index / 25 }}
         className='w-full sm:w-[calc(50%_-_20px)] lg:w-[calc(33%_-_20px)] flex flex-col gap-2 hover:no-underline text-text p-4 rounded-md border-[1px] border-border shadow-[2px_2px_0_1px] shadow-border'
     >
         <Link
