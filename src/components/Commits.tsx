@@ -11,7 +11,7 @@ export const Commits = () => {
         queryKey: ["commits"],
         queryFn: async ({ pageParam = 0 }) => {
             const response = (await apiClient.graphql({
-                query: `{commits(limit: 10, offset: ${(pageParam) * 10}, order_by: {created_at: desc}) {
+                query: `{commits(limit: 10, offset: ${(pageParam) * 10}, where: {hidden: {_eq: false}}, order_by: {created_at: desc}) {
                     id created_at repo repo_url commit commit_url branch image additions deletions changed_files
                 }
             }`}))?.data?.commits
