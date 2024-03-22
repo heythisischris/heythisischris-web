@@ -20,5 +20,5 @@ jobs:
         run: |
           npm install
           npx vite build --mode ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
-          aws s3 sync --delete ./dist s3://heythisischris-web${{ github.ref == 'refs/heads/master' && '' || '-staging' }}
+          aws s3 sync --delete ./dist ${{ github.ref == 'refs/heads/master' && 's3://heythisischris-web' || 's3://heythisischris-web-staging' }}
           aws cloudfront create-invalidation --distribution-id ${{ github.ref == 'refs/heads/master' && 'EE4MB27CPKA5P' || 'E1F7ZZT6JX48L5' }} --paths \"/*\" > /dev/null"

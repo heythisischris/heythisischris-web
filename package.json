@@ -6,8 +6,8 @@
   "scripts": {
     "start:prod": "yarn install && vite --mode production",
     "start:staging": "yarn install && vite --mode staging",
-    "build:prod": "yarn install && vite build --mode production && aws s3 --profile heythisischris sync --delete ./dist s3://heythisischris && aws --profile heythisischris cloudfront create-invalidation --distribution-id EE4MB27CPKA5P --paths \"/*\" > /dev/null",
-    "build:staging": "yarn install && vite build --mode staging && aws s3 --profile heythisischris sync --delete ./dist s3://heythisischris-staging && aws --profile heythisischris cloudfront create-invalidation --distribution-id E1F7ZZT6JX48L5 --paths \"/*\" > /dev/null",
+    "build:prod": "yarn install && vite build --mode production && aws s3 --profile heythisischris sync --delete ./dist s3://heythisischris-web && aws --profile heythisischris cloudfront create-invalidation --distribution-id EE4MB27CPKA5P --paths \"/*\" > /dev/null",
+    "build:staging": "yarn install && vite build --mode staging && aws s3 --profile heythisischris sync --delete ./dist s3://heythisischris-web-staging && aws --profile heythisischris cloudfront create-invalidation --distribution-id E1F7ZZT6JX48L5 --paths \"/*\" > /dev/null",
     "build": "yarn build:staging && yarn build:prod",
     "ngrok": "ngrok http --domain meet-python-incredibly.ngrok-free.app 5173"
   },
