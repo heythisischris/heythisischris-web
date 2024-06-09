@@ -28,12 +28,26 @@ export const Posts = () => {
             transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className='mb-4 px-2 py-1'>
             <div className='mx-2 sm:mx-0'>My name is <b>Christopher Aitken</b>- I'm a senior software engineer with 8+ years experience based out of <a target='_blank' className=' whitespace-nowrap' href='https://en.wikipedia.org/wiki/New_Orleans'>New Orleans, LA</a>. I particularly enjoy developing fin-tech apps on <b>AWS</b> using <b>React</b>, <b>Node.js</b>, & <b>PostgreSQL</b>. I also build custom AI integrations using <b>OpenAI</b>, <b>Mistral</b>, <b>Bedrock</b>, & <b>pgVector</b>. Feel free to take a look around!
             </div>
+
+            <a
+                title="An overview of my GitHub contributions for the past year"
+                target="_blank"
+                href="https://github.com/heythisischris"
+                className="mt-2 flex sm:hidden"
+            >
+                <img
+                    alt="github"
+                    src={`https://files.heythisischris.com/githubcalendar.svg?${new Date().toISOString().split('T')[0]}`}
+                    className="brightness-90 hue-rotate-90"
+                />
+            </a>
         </motion.div> :
-            <Link className='block mb-4 w-fit' to='/'>← Go back</Link>}
+            <Link className='block mb-4 w-fit' to='/'>← Go back</Link>
+        }
         <div className='flex flex-col gap-4'>
             {posts?.map((post, index) => <Post post={post} index={index} />)}
         </div>
-    </div>
+    </div >
 }
 
 const Post = ({ post, index }) => {

@@ -5,13 +5,15 @@ const apiClient = API.generateClient();
 import { motion } from "framer-motion"
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { useRef } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-export const Commits = () => {
+export const Commits = ({ className = '' } = {}) => {
+    const { projectId } = useParams();
     const { data, fetchNextPage, isFetchingNextPage, hasNextPage } = useInfiniteQuery({
-        queryKey: ["commits"],
+        queryKey: ["commits", projectId],
         queryFn: async ({ pageParam = 0 }) => {
             const response = (await apiClient.graphql({
-                query: `{commits(limit: 10, offset: ${(pageParam) * 10}, where: {hidden: {_eq: false}}, order_by: {created_at: desc}) {
+                query: `{commits(limit: 10, offset: ${(pageParam) * 10}, where: {hidden: {_eq: false}${projectId ? `, repo: {_ilike: "${projectId}%"}` : ``}}, order_by: {created_at: desc}) {
                     id created_at repo repo_url commit commit_url branch image additions deletions changed_files
                 }
             }`}))?.data?.commits
@@ -36,19 +38,7 @@ export const Commits = () => {
     const virtualItems = rowVirtualizer.getVirtualItems();
 
     const handleScroll = (e) => !isFetchingNextPage && hasNextPage && e.target.scrollTop > (e.target.scrollHeight - e.target.clientHeight - 300) && fetchNextPage();
-    return <div className='sm:w-[calc(33%_-_10px)] p-4 pt-0'>
-        <a
-            title="An overview of my GitHub contributions for the past year"
-            target="_blank"
-            href="https://github.com/heythisischris"
-            className="mb-4 flex sm:hidden"
-        >
-            <img
-                alt="github"
-                src={`https://files.heythisischris.com/githubcalendar.svg?${new Date().toISOString().split('T')[0]}`}
-                className="brightness-90 hue-rotate-90"
-            />
-        </a>
+    return <div className={`${className}`}>
         <motion.div className='font-bold text-xl mb-2'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -67,7 +57,7 @@ export const Commits = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: (10 - (commits?.length - virtualItem.index)) / 10 }}
                                 >
-                                    <a style={{ textDecorationLine: 'none' }} className="hover:opacity-50 flex bg-card px-2 py-1 rounded-t-md" target="_blank" href={commit.commit_url}>
+                                    <Link style={{ textDecorationLine: 'none' }} className="hover:opacity-50 flex bg-card px-2 py-1 rounded-t-md" to={`/portfolio/${commit.repo.split('-')[0]}`}>
                                         <div className="flex flex-row gap-1">
                                             <img src={commit?.image} className="h-8 w-8 rounded-md" />
                                             <div className="flex flex-col">
@@ -76,7 +66,8 @@ export const Commits = () => {
                                                     {formatDate(commit.created_at)}
                                                 </div>
                                             </div>
-                                        </div></a>
+                                        </div>
+                                    </Link>
                                     <div className='text-sm px-2 py-1'>{commit.commit}</div>
                                     <div className='flex flex-row justify-between gap-x-2 px-2 text-xs mb-1 font-[monospace]'>
                                         <div className='text-[grey]'>{commit?.branch}: {commit?.commit_url?.split('/commit/')?.[1]?.slice(0, 8)}</div>

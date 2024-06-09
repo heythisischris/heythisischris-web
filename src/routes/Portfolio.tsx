@@ -50,11 +50,11 @@ const AppTile = ({ app, index, allLoaded }) => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: (isMobile || allLoaded) ? 0 : index / 25 }}
-        className='w-full sm:w-[calc(50%_-_20px)] lg:w-[calc(33%_-_20px)] flex flex-col gap-2 hover:no-underline text-text p-4 rounded-md border-[1px] border-border shadow-[2px_2px_0_1px] shadow-border'
+        className='w-full sm:w-[calc(50%_-_20px)] lg:w-[calc(33%_-_20px)] flex flex-col gap-2 hover:no-underline text-text rounded-md border-[1px] border-border shadow-[2px_2px_0_1px] shadow-border'
     >
         <Link
             to={`/portfolio/${app?.slug}`}
-            className="text-text hover:opacity-50"
+            className="text-text hover:opacity-50 p-4"
             style={{ textDecorationLine: 'none' }}
         >
             <div className="flex flex-row gap-2">
@@ -62,7 +62,7 @@ const AppTile = ({ app, index, allLoaded }) => {
                 <div className="flex flex-col justify-center">
                     <div className="text-xl">{app?.name}</div>
                     <div className="mt-[-2px]">{app?.subtitle}</div>
-                    <div className="flex flex-wrap gap-2 text-xs">
+                    <div className="flex flex-wrap gap-1 text-xs">
                         {app?.tags?.map((tag, index) => <div key={index} className="bg-card rounded-xl px-2">{tag}</div>)}
                     </div>
                 </div>

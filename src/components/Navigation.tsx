@@ -36,13 +36,14 @@ export const Navigation = () => {
     }, [location])
 
     return (
-        <div className={`bg-background text-text leading-7`}>
+        <div className={`bg-background text-text leading-7 pt-4`}>
             {loading && <Loader />}
             <div
+                className='fixed top-0 z-10'
                 title={`Recent articles I've bookmarked from Hacker News, Reddit, & Google News`} >
                 <Marquee
                     pauseOnHover
-                    className='bg-card text-text border-[1px] border-border h-[20px] sm:border-x-[0px] sm:border-t-[0px]'
+                    className='bg-card text-text border-b-[1px] border-border h-[20px] sm:border-x-[0px] sm:border-t-[0px]'
                 >
                     {links?.map((link, index) => {
                         const domain = link?.source_link?.split('https://')?.[1]?.split('/')?.[0];
