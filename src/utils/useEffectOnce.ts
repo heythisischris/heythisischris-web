@@ -1,13 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-export const useEffectOnce = (effect: () => void) => {
-    const initialRef = useRef(true);
-
+export const useEffectOnce = (callback) => {
+    const mounted = useRef(true);
     useEffect(() => {
-        if (!initialRef.current) {
-            return;
+        if (!mounted.current) {
+            return callback();
         }
-        initialRef.current = false;
-        effect();
-    }, [effect]);
+        mounted.current = false;
+    }, []);
 };
