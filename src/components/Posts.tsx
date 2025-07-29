@@ -26,7 +26,7 @@ export const Posts = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className='mb-4 px-2 py-1'>
-            <div className='mx-2 sm:mx-0'>My name is <b>Christopher Aitken</b>- I'm a senior software engineer with 8+ years experience based out of <a target='_blank' className=' whitespace-nowrap' href='https://en.wikipedia.org/wiki/New_Orleans'>New Orleans, LA</a>. I particularly enjoy developing fin-tech apps on <b>AWS</b> using <b>React</b>, <b>Node.js</b>, & <b>PostgreSQL</b>. I also build custom AI integrations using <b>OpenAI</b>, <b>Mistral</b>, <b>Bedrock</b>, & <b>pgVector</b>. Feel free to take a look around!
+            <div className='mx-2 sm:mx-0'>My name is <b>Christopher Aitken</b>- I'm a senior software engineer with 10+ years experience based out of <a target='_blank' className=' whitespace-nowrap' href='https://en.wikipedia.org/wiki/Apalachicola,_Florida'>Apalachicola, FL</a>. I particularly enjoy developing fin-tech apps on <b>AWS</b> using <b>React</b>, <b>Node.js</b>, & <b>PostgreSQL</b>. I also build custom AI integrations using <b>Anthropic Claude 4 Sonnet</b>, <b>OpenAI GPT-4.1</b>, & <b>Google Gemini 2.5 Pro</b>. Feel free to take a look around!
             </div>
 
             <a
@@ -58,7 +58,7 @@ const Post = ({ post, index }) => {
     const [expanded, setExpanded] = useState(!!postId);
     const maxHeight = expanded ? (isMobile ? 2000 : 1000) : (isMobile ? 400 : 200);
     return <motion.div key={index} ref={contentRef}
-        className={`shadow-[2px_2px_0_1px] shadow-border border-text border-[1px] rounded-md max-h-[200px] ${expanded && 'max-h-[2000px]'} overflow-y-clip relative`}
+        className={`shadow-[2px_2px_0_1px] shadow-shadow border-border border-[1px] rounded-[0px] max-h-[200px] ${expanded && 'max-h-[2000px]'} overflow-y-clip relative`}
         initial={{ opacity: 0, y: -10, maxHeight }}
         animate={{ opacity: 1, y: 0, maxHeight }}
         transition={{ duration: 0.5, ease: "easeOut", delay: (isMobile || expanded) ? 0 : index / 10 }}>

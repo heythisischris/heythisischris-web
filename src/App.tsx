@@ -6,6 +6,8 @@ import { Navigation } from '#src/components';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { PostHogProvider } from 'posthog-js/react'
 const queryClient = new QueryClient();
+import { registerSW } from 'virtual:pwa-register';
+registerSW({ immediate: true });
 
 Amplify.configure({
   Auth: {

@@ -62,22 +62,22 @@ export const Navigation = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className='flex flex-row gap-2 items-center p-4'
+                    className='flex flex-row gap-3 items-center p-4'
                 >
                     <Link to={`/`} className={`hidden sm:flex hover:opacity-50 flex-row gap-2`}>
-                        <img className='w-[80px] rounded-xl border-[1px] border-border' src={`/logo.jpg`} />
+                        <img className='w-[80px]' src={`/logo.jpg`} />
                     </Link>
                     <div className='flex flex-col gap-2 sm:gap-1 w-full lg:max-w-[450px]'>
                         <div className='flex flex-row items-center justify-start gap-2'>
                             <Link to={`/`} className={`hover:opacity-50 flex flex-row gap-2`} style={{ textDecorationLine: 'none' }} >
-                                <img className='flex sm:hidden w-[40px] rounded-md border-[1px] border-border' src={`/logo.jpg`} />
+                                <img className='flex sm:hidden w-[40px] rounded-[0px] border-[1px] border-border' src={`/logo.jpg`} />
                                 {/* <img className='w-[200px] object-contain' src={`/logo_${darkMode ? 'dark' : 'light'}.png`} /> */}
                                 <span className='text-text text-3xl'>hey, this is chris</span>
                             </Link>
                             <img
                                 onClick={() => setDarkMode(!darkMode)}
                                 title={darkMode ? `Turn on the lights` : `Turn off the lights`}
-                                className="flex sm:hidden w-[20px] object-contain hover:opacity-80 cursor-pointer ml-auto sm:ml-0 border-border border-[1px] rounded-md shadow-[2px_2px_0_1px] shadow-border"
+                                className="flex sm:hidden w-[20px] object-contain hover:opacity-80 cursor-pointer ml-auto sm:ml-0 border-border border-[1px] rounded-[0px] shadow-[2px_2px_0_1px] shadow-shadow"
                                 src={darkMode ? '/off.png' : '/on.png'}
                             />
                         </div>
@@ -90,14 +90,14 @@ export const Navigation = () => {
                             ].map((obj, index) =>
                                 <Link
                                     onTouchStart={() => navigate(obj?.link)}
-                                    className={`${obj?.link === location.pathname ? 'bg-lightblue text-black border-border' : 'hover:opacity-50 text-subtitle border-border '} px-2 rounded-md border-[1px] shadow-[2px_2px_0_1px] shadow-border text-sm sm:text-base`}
+                                    className={`${obj?.link === location.pathname ? 'bg-lightblue text-black border-border' : 'hover:opacity-50 text-subtitle border-border '} px-2 rounded-[0px] border-[1px] shadow-[2px_2px_0_1px] shadow-shadow text-sm sm:text-base`}
                                     key={index} to={obj?.link} style={{ textDecorationLine: 'none' }}>{obj?.label}</Link>)}
 
                             <img
                                 onTouchStart={() => setDarkMode(!darkMode)}
                                 onClick={() => setDarkMode(!darkMode)}
                                 title={darkMode ? `Turn on the lights` : `Turn off the lights`}
-                                className="w-[18px] object-contain hover:opacity-80 cursor-pointer ml-auto sm:ml-0 border-border border-[1px] rounded-md shadow-[2px_2px_0_1px] shadow-border hidden sm:flex"
+                                className="w-[18px] object-contain hover:opacity-80 cursor-pointer ml-auto sm:ml-0 border-border border-[1px] rounded-[0px] shadow-[2px_2px_0_1px] shadow-shadow hidden sm:flex"
                                 src={darkMode ? '/off.png' : '/on.png'}
                             />
                         </div>

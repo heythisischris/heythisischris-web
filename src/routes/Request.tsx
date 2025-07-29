@@ -27,7 +27,7 @@ export const Request = () => {
                 </li>
                 <div className='overflow-y-clip max-h-[calc(100%_-_105px)] pt-4'>
                     <Cal
-                        calLink="heythisischris/30min"
+                        calLink="meets/heythisischris"
                         style={{ width: Math.min(windowSize.width - 20, 1250), height: "100%", overflow: "scroll" }}
                         config={{ layout: 'month_view' }}
                     />

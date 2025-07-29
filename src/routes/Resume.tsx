@@ -4,6 +4,7 @@ import * as API from "aws-amplify/api";
 const apiClient = API.generateClient();
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
+import { FaArrowRight, FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export const Resume = () => {
     const isMobile = useIsMobile();
@@ -26,12 +27,12 @@ export const Resume = () => {
         }))?.data?.testimonials,
     })
     const styles = {
-        link: `underline`,
-        section: `flex flex-col border-border border-[1px] rounded-md shadow-[2px_2px_0_1px] shadow-border`,
+        link: `underline hover:opacity-50`,
+        section: `flex flex-col border-border border-[1px] rounded-[0px] shadow-[2px_2px_0_1px] shadow-shadow`,
         sectionHeader: `bg-card px-2 py-1 font-bold rounded-t-md border-b-[1px] border-border`,
         sectionInner: `px-2 py-1 relative flex flex-col gap-1 my-2`,
         sectionDate: `xl:absolute right-2 font-bold text-subtitle`,
-        sectionImage: `inline w-[20px] h-[20px] mr-[3px] mt-[-2px] rounded-md hidden`,
+        sectionImage: `inline w-[20px] h-[20px] mr-[3px] mt-[-2px] rounded-[4px]`,
         button: `px-2 py-0 border-[2px] border-border w-fit font-bold bg-[#ff0]`,
         button2: `px-2 py-1 border-[2px] border-border w-fit font-bold bg-card border-t-[#eee] border-l-[#eee]`,
     }
@@ -41,14 +42,15 @@ export const Resume = () => {
                 <motion.div initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className='flex flex-wrap justify-between'>
-                    <div className='flex flex-wrap gap-x-2'>
+                    <div className='flex flex-wrap items-center gap-x-1'>
                         <div className='text-xl font-bold'>Christopher Aitken</div>
-                        <div className='text-xl text-subtitle'>Senior Software Engineer</div>
+                        <FaArrowRight className='text-xs text-subtitle' />
+                        <div className='text-xl text-subtitle'>Principal Software Engineer</div>
                     </div>
                     <div className='flex flex-row gap-2'>
-                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="christopher_aitken_resume.pdf" style={{ textDecorationLine: 'none' }}>Download PDF</a>
-                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="https://github.com/heythisischris" style={{ textDecorationLine: 'none' }}>GitHub</a>
-                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-border hover:opacity-50 px-2 rounded-md border-[1px] border-border" href="https://linkedin.com/in/heythisischris" style={{ textDecorationLine: 'none' }}>LinkedIn</a>
+                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-shadow hover:opacity-50 px-2 rounded-[0px] border-[1px] border-border flex flex-row items-center gap-1" href="https://files.heythisischris.com/christopher_aitken_resume.pdf" style={{ textDecorationLine: 'none' }}><FaFilePdf />Download</a>
+                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-shadow hover:opacity-50 px-2 rounded-[0px] border-[1px] border-border flex flex-row items-center gap-1" href="https://github.com/heythisischris" style={{ textDecorationLine: 'none' }}><FaGithub />GitHub</a>
+                        <a target="_blank" className="text-text shadow-[2px_2px_0_1px] shadow-shadow hover:opacity-50 px-2 rounded-[0px] border-[1px] border-border flex flex-row items-center gap-1" href="https://linkedin.com/in/heythisischris" style={{ textDecorationLine: 'none' }}><FaLinkedin />LinkedIn</a>
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: -10 }}
@@ -56,7 +58,7 @@ export const Resume = () => {
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.1 }} className={`${styles.section}`}>
                     <div className={`${styles.sectionHeader}`}>Introduction</div>
                     <div className={`${styles.sectionInner}`}>
-                        <div>I'm a senior software engineer with 8+ years experience based out of <a target='_blank' href='https://en.wikipedia.org/wiki/New_Orleans'>New Orleans, LA</a>. I particularly enjoy developing fin-tech apps on AWS using React, Node.js, & PostgreSQL. I also build custom AI integrations using OpenAI, AWS Bedrock, & pgVector.</div>
+                        <div>I'm a senior software engineer with 10+ years experience based out of <a target='_blank' href='https://en.wikipedia.org/wiki/Apalachicola,_Florida'>Apalachicola, FL</a>. I particularly enjoy developing fin-tech apps on AWS using React, Node.js, & PostgreSQL. I also build custom AI integrations using Anthropic Claude 4 Sonnet, OpenAI GPT-4.1, & Google Gemini 2.5 Pro.</div>
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: -10 }}
@@ -75,9 +77,11 @@ export const Resume = () => {
                     <div className={`${styles.sectionHeader}`}>Experience</div>
                     <div className={`${styles.sectionInner}`}>
                         <div className={`${styles.sectionDate}`}>Mar 2023 - Present</div>
-                        <div><b>Lead Software Developer</b><span> – </span>
+                        <div><b>Principal Software Engineer</b>
                             <a className={`${styles.link}`} target='_blank' href='https://longbow.pro'><img className={`${styles.sectionImage}`} src='/longbow.png' />Longbow</a><span>, </span>
-                            <a className={`${styles.link}`} target='_blank' href='https://42macro.com'><img className={`${styles.sectionImage}`} src='/42macro.png' />42 Macro</a><span>, & </span>
+                            <a className={`${styles.link}`} target='_blank' href='https://42macro.com'><img className={`${styles.sectionImage}`} src='/42macro.png' />42 Macro</a><span>, </span>
+                            <a className={`${styles.link}`} target='_blank' href='https://wallstreetbeats.com'><img className={`${styles.sectionImage}`} src='/streetbeats.png' />WSB</a>
+                            <span>, & </span>
                             <a className={`${styles.link}`} target='_blank' href='https://options-insight.com'><img className={`${styles.sectionImage}`} src='/optionsinsight.png' />Options Insight</a>
 
                         </div>
@@ -104,15 +108,13 @@ export const Resume = () => {
                         </div>
                         <div>Software developer at an agency for client-facing and internal projects</div>
                         <div className='ml-[20px]'>
-                            <div>TECKpert App – React Native-based freelancing app for tech professionals</div>
-                            <div>CorkageFee – Objective-C/Swift iOS app which shows wine bottle fees at nearby restaurants</div>
-                            <div>Hospitalist Assist – JavaScript-based web app for health care management organizations</div>
-                            <div>RealDash – Angular-based web app for commercial real estate investors</div>
+                            <div><a className={`${styles.link}`} target='_blank' href='https://corkagefee.com'><img className={`${styles.sectionImage}`} src='/corkagefee.png' />CorkageFee</a> – Objective-C/Swift iOS app which shows wine bottle fees at nearby restaurants</div>
+                            <div><a className={`${styles.link}`} target='_blank' href='https://realdash.com'><img className={`${styles.sectionImage}`} src='/realdash.png' />RealDash</a> – Angular-based web app for commercial real estate investors</div>
                         </div>
                     </div>
                     <div className={`${styles.sectionInner}`}>
                         <div className={`${styles.sectionDate}`}>Mar 2020 – Jan 2022</div>
-                        <div><b>Mobile Developer</b><span> – </span>
+                        <div><b>Software Developer</b><span> – </span>
                             <a className={`${styles.link}`} target='_blank' href='https://finequities.com'><img className={`${styles.sectionImage}`} src='/finequities.jpg' />Finequities</a><span>, Miami, FL</span>
                         </div>
                         <div>Developed a social trading app which integrates with existing brokerage accounts</div>
@@ -130,12 +132,12 @@ export const Resume = () => {
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }} className={`${styles.section}`}>
                     <div className={`${styles.sectionHeader}`}>Personal Projects</div>
                     <div className={`${styles.sectionInner}`}>
-                        <div className={`${styles.sectionDate}`}>Nov 2023</div>
-                        <div><a className={`${styles.link}`} target='_blank' href="https://calories.bot"><img className={`${styles.sectionImage}`} src='/caloriesbot.png' /><b>Calories.bot</b></a> – Easily track your calories via SMS (uses GPT-4 to parse messages)</div>
+                        <div className={`${styles.sectionDate}`}>Jan 2024</div>
+                        <div><a className={`${styles.link}`} target='_blank' href="https://swiftynote.com"><img className={`${styles.sectionImage}`} src='/swiftynote.png' /><b>SwiftyNote</b></a> – An AI-powered medical scribe w/ customizable templates & workflows</div>
                     </div>
                     <div className={`${styles.sectionInner}`}>
-                        <div className={`${styles.sectionDate}`}>Dec 2022</div>
-                        <div><a className={`${styles.link}`} target='_blank' href="https://calc.bot"><img className={`${styles.sectionImage}`} src='/calcbot.png' /><b>Calc.bot</b></a> – Simple split-pane calculator w/ ability to save & load files from your local device</div>
+                        <div className={`${styles.sectionDate}`}>Jan 2024</div>
+                        <div><a className={`${styles.link}`} target='_blank' href="https://equalify.app"><img className={`${styles.sectionImage}`} src='/equalify.png' /><b>Equalify</b></a> – Open-source web accessibility platform for developers</div>
                     </div>
                     <div className={`${styles.sectionInner}`}>
                         <div className={`${styles.sectionDate}`}>Feb 2021</div>
@@ -152,7 +154,7 @@ export const Resume = () => {
                     <div className={`${styles.sectionHeader}`}>Skills</div>
                     <div className={`${styles.sectionInner}`}>
                         <div><b>Cloud Providers:</b> Amazon Web Services, Microsoft Azure, Google Cloud Platform, Digital Ocean</div>
-                        <div><b>Languages:</b> TypeScript, JavaScript, Node.js, Swift, Objective-C, PHP, C#</div>
+                        <div><b>Languages:</b> TypeScript, JavaScript, Node.js, Python, Swift, Objective-C, PHP, C#</div>
                         <div><b>Frameworks:</b> React, React Native, Expo, Svelte, Angular, WordPress, GraphQL, Hasura, AWS Amplify</div>
                         <div><b>Databases:</b> PostgreSQL, DynamoDB, MySQL, MongoDB</div>
                     </div>
@@ -161,14 +163,14 @@ export const Resume = () => {
             <div className='sm:w-[calc(33%_-_10px)] p-4 pt-0'>
                 <div className='text-xl font-bold mb-4'>Testimonials</div>
                 <div className='flex flex-col gap-4'>
-                    {testimonials?.map((testimonial, index) => <motion.div key={index} className='shadow-[2px_2px_0_1px_#000] border-text border-[1px] rounded-md'
+                    {testimonials?.map((testimonial, index) => <motion.div key={index} className='shadow-[2px_2px_0_1px] shadow-shadow border-border border-[1px] rounded-[0px]'
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : index / 10 }}
                     >
                         <a className="hover:no-underline flex bg-card px-2 py-1 rounded-t-md border-b-[1px] border-border" target="_blank" href={testimonial.author_linkedin}>
                             <div className="flex flex-row gap-2 items-center">
-                                <img alt="" src={testimonial.author_image} className="h-12 w-12 rounded-md" />
+                                <img alt="" src={testimonial.author_image} className="h-12 w-12 rounded-[0px]" />
                                 <div className="flex flex-col">
                                     <a className="mt-[-3px]" target="_blank" href={testimonial.author_linkedin}
                                     >{testimonial.author_name}</a

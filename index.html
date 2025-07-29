@@ -8,13 +8,32 @@
   <title>hey, this is chris</title>
   <meta name="theme-color" content="#dae3e9">
   <meta property="og:description"
-    content="I'm a senior software engineer with 8+ years experience based out of New Orleans, LA">
+    content="I'm a senior software engineer with 10+ years experience based out of Apalachicola, FL">
   <meta property="og:title" content="hey, this is chris" />
   <meta property="og:url" content="https://heythisischris.com" />
   <meta property="og:image" content="https://heythisischris.com/social.jpg" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script>
+    (function (d, t) {
+      var BASE_URL = "https://app.chatwoot.com";
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = BASE_URL + "/packs/js/sdk.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function () {
+        window.chatwootSDK.run({
+          websiteToken: 'dVinBK3Ze7RNHBGXwimTVaaa',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document, "script");
+  </script>
 </head>
 
 <body>

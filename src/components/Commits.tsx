@@ -44,7 +44,7 @@ export const Commits = ({ className = '' } = {}) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}>Recent contributions</motion.div>
         <div className='h-[calc(100vh_-_200px)]'>
-            <div ref={scrollRef} onScroll={handleScroll} className={`flex flex-col gap-2 w-full overflow-y-scroll h-full rounded-md px-3 sm:px-0 sm:pr-2`}>
+            <div ref={scrollRef} onScroll={handleScroll} className={`flex flex-col gap-2 w-full overflow-y-scroll h-full rounded-[0px] px-3 sm:px-0 sm:pr-2`}>
                 <div style={{ height: rowVirtualizer.getTotalSize(), width: '100%', position: 'relative' }}>
                     <div style={{
                         position: 'absolute', top: 0, left: 0, width: '100%', transform: `translateY(${virtualItems?.[0]?.start ?? 0}px)`
@@ -52,14 +52,14 @@ export const Commits = ({ className = '' } = {}) => {
                         {virtualItems.map((virtualItem) => {
                             const commit = commits[virtualItem.index];
                             return (
-                                <motion.div key={virtualItem.index} className={`${virtualItem?.index && 'border-t-[1px]'} border-border pb-2 border-[1px] rounded-md mb-4 shadow-[2px_2px_0_1px] shadow-border`}
+                                <motion.div key={virtualItem.index} className={`${virtualItem?.index && 'border-t-[1px]'} border-border pb-2 border-[1px] rounded-[0px] mb-4 shadow-[2px_2px_0_1px] shadow-shadow`}
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: (10 - (commits?.length - virtualItem.index)) / 10 }}
                                 >
                                     <Link style={{ textDecorationLine: 'none' }} className="hover:opacity-50 flex bg-card px-2 py-1 rounded-t-md" to={`/portfolio/${commit.repo.split('-')[0]}`}>
                                         <div className="flex flex-row gap-1">
-                                            <img src={commit?.image} className="h-8 w-8 rounded-md" />
+                                            <img src={commit?.image} className="h-8 w-8 rounded-[0px]" />
                                             <div className="flex flex-col">
                                                 <span className="mt-[-3px]">{commit.repo}</span>
                                                 <div className="text-[#666] text-xs mt-[-5px]">

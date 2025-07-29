@@ -9,7 +9,8 @@
         --subtitle: #666666;
         --card: #eaf2f8;
         --selected: #aaaaaa;
-        --border: #333;
+        --border: #999;
+        --shadow: #ccc;
         --green: #19a034;
         --red: #ff0000;
         --purple: #800080;
@@ -28,6 +29,7 @@
         --card: #333333;
         --selected: #666666;
         --border: #999;
+        --shadow: #333;
         --green: #1DCA3F;
         --red: #ff0000;
         --purple: #800080;
