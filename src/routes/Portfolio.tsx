@@ -50,7 +50,7 @@ const AppTile = ({ app, index, allLoaded }) => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: (isMobile || allLoaded) ? 0 : index / 25 }}
-        className='w-full sm:w-[calc(50%_-_20px)] lg:w-[calc(33%_-_20px)] flex flex-col gap-2 hover:no-underline text-text rounded-[0px] border-[1px] border-border shadow-[2px_2px_0_1px] shadow-shadow'
+        className='w-full md:w-[calc(50%_-_20px)] flex flex-col gap-2 hover:no-underline text-text rounded-[0px] border-[1px] border-border shadow-[2px_2px_0_1px] shadow-shadow'
     >
         <Link
             to={`/portfolio/${app?.slug}`}

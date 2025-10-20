@@ -31,10 +31,10 @@ export const Project = () => {
         <div className="flex flex-col gap-4">
             <Link className='w-fit' to='/portfolio'>← Go back</Link>
             <div className='flex flex-col md:flex-row justify-between min-h-[100vh]'>
-                <div className='md:px-4 py-2 pt-0 w-full md:w-[66%]'>
+                <div className='md:px-4 py-2 pt-0 w-full'>
                     <motion.div initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className="flex flex-wrap gap-x-12 gap-y-4 p-4 items-center border-b-[1px] border-b-border pb-8">
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className="flex flex-wrap gap-x-12 gap-y-4 p-4 items-center">
                         <div className='flex flex-row items-center gap-2'>
                             {project?.image ? <img
                                 alt=""
@@ -58,14 +58,14 @@ export const Project = () => {
                         </motion.div>
                     </motion.div>
                     <motion.div
-                        className='flex flex-col gap-2 mt-8'
+                        className='flex flex-col gap-2'
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}
                         dangerouslySetInnerHTML={{ __html: project?.content }}
                     />
                 </div>
-                <Commits className='w-full md:w-[33%] p-4 pt-0 mt-8 md:mt-[-36px]' />
+                {/* <Commits className='w-full md:w-[33%] p-4 pt-0 mt-8 md:mt-[-36px]' /> */}
             </div>
         </div>
     </div>

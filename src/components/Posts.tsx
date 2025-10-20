@@ -21,12 +21,12 @@ export const Posts = () => {
         }))?.data?.posts,
     })
 
-    return <div className={`${!postId ? 'sm:w-[calc(66%_-_10px)]' : 'sm:w-[calc(100%_-_20px)]'} p-2 pt-0`}>
+    return <div className={`sm:w-[calc(100%_-_20px)] p-2 pt-0`}>
         {!postId ? <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0 }} className='mb-4 px-2 py-1'>
-            <div className='mx-2 sm:mx-0'>My name is <b>Christopher Aitken</b>- I'm a senior software engineer with 10+ years experience based out of <a target='_blank' className=' whitespace-nowrap' href='https://en.wikipedia.org/wiki/Apalachicola,_Florida'>Apalachicola, FL</a>. I particularly enjoy developing fin-tech apps on <b>AWS</b> using <b>React</b>, <b>Node.js</b>, & <b>PostgreSQL</b>. I also build custom AI integrations using <b>Anthropic Claude 4 Sonnet</b>, <b>OpenAI GPT-4.1</b>, & <b>Google Gemini 2.5 Pro</b>. Feel free to take a look around!
+            <div className='mx-2 sm:mx-0'>My name is <b>Christopher Aitken</b>- I'm a senior software engineer with 10+ years experience based out of <a target='_blank' className=' whitespace-nowrap' href='https://en.wikipedia.org/wiki/Apalachicola,_Florida'>Apalachicola, FL</a>. I particularly enjoy developing fin-tech apps on <b>AWS</b> using <b>React</b>, <b>Node.js</b>, & <b>PostgreSQL</b>. I also build custom AI integrations using <b>Anthropic Claude Sonnet 4.5</b>, <b>OpenAI GPT-5</b>, & <b>Google Gemini 2.5 Pro</b>. Feel free to take a look around!
             </div>
 
             <a
@@ -63,7 +63,7 @@ const Post = ({ post, index }) => {
         animate={{ opacity: 1, y: 0, maxHeight }}
         transition={{ duration: 0.5, ease: "easeOut", delay: (isMobile || expanded) ? 0 : index / 10 }}>
         {(contentOverflow && !expanded) && <div onClick={() => setExpanded(true)} className={`cursor-pointer hover:text-[#6666] bg-gradient-to-b to-75% from-[#ffffff00] to-background w-full h-[100px] bottom-0 absolute flex flex-col justify-end items-center font-bold text-subtitle pb-1`}>+ See more</div>}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between bg-card px-2 py-1 rounded-t-md border-b-[1px] border-border">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between bg-card px-2 py-1 border-b-[1px] border-border">
             <Link className="font-bold text-xl text-text w-full flex flex-wrap items-center justify-between hover:opacity-50" to={`/posts/${post.slug}`} style={{ textDecorationLine: 'none' }}
             >{post.name}
                 <span className="text-sm font-normal text-subtitle">

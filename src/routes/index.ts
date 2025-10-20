@@ -1,6 +1,6 @@
 export * from './Home'
 export * from './Portfolio'
 export * from './Resume'
-export * from './Request'
+export * from './Contact'
 export * from './Post'
 export * from './Project'

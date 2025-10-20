@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
     define: { 'import.meta.env.VITE_BUILD_DATE': JSON.stringify(new Date().toISOString()) },
+    server: { allowedHosts: ['c.ngrok.pro'] },
     plugins: [
         react(),
         VitePWA({
